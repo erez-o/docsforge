@@ -1,0 +1,19 @@
+{
+    "sidebar": {
+        "Basic Tutorial": [
+            {"pageName": "Getting Started","filePath": "docs/getting-started.md"},
+            {"pageName": "Customizing The Sidebar","filePath": "docs/customizing-the-sidebar.md"},
+            {"pageName": "Customizing The Public Api","filePath": "docs/customizing-the-public-api.md"}
+        ],
+        "More Info": [
+            {"pageName": "Autodoc Settings","filePath": "docs/autodocSettings-full-list.md"},
+            {"pageName": "Building Version Documentation","filePath": "docs/building-version-documentation.md"},
+            {"pageName": "Discussions","filePath": "docs/discussions.md"},
+            {"pageName": "Markdown Cheat Sheet","filePath": "docs/markdown-cheat-sheet.md"},
+            {"pageName": "Configuration Schema","filePath": "docs/schema.json"},
+            {"pageName": "Feature Requests","url": "https://github.com/erez-o/doxiz/issues"},
+            {"pageName": "Contact Us","filePath": "docs/contact-us.md"}
+        ]
+    },
+    "autodocSettings": []
+}

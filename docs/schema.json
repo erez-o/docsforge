@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": ["sidebar"],
+  "properties": {
+    "sidebar": {
+      "type": "object",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                  {
+                    "type": "object",
+                    "required": ["pageName", "filePath"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "pageName": {"type": "string", "description": "Page name that will appear in your sidebar"},
+                      "filePath": {"type": "string", "description": "Documentation file to copy from your repository. For example, docs/installation.md."}
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": ["apiPath"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "apiPath": {"type": "string", "description": "Path of a created API page (including baseUrl). For example 'api/class-myclass/function-myfunc'"}
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": ["pageName", "url"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "pageName": {"type": "string", "description": "Page name that will appear in your sidebar"},
+                      "url": {"type": "string", "description": "full url of where this page will link to."}
+                    }
+                  }
+              ]
+            }
+        }
+      }
+    },
+    "autodocSettings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["language", "sectionName", "baseUrl"],
+        "additionalProperties": false,
+        "properties": {
+            "sectionName": {"type": "string", "description": "Section name of this generated api. For example, 'Public API'"},
+            "baseUrl": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "description": "All generated API pages will be under this url. For example 'api' will create urls like https://doxiz.com/project_name/version_name/api/some_function/ . Use only alphanumerical lower case letters and dashes"},
+            "language": {"type": "string", "enum": ["cpp", "c", "csharp", "java", "python"], "description": "Language of this code is written in"},
+            "INPUT": {"type": "string", "description": "Limit auto-documentation to only these files and directories. Files and directories are relative to your root folder. Files and folders are separated by space. If left blank, input is all files and folders in your repository."},
+            "EXCLUDE": {"type": "string","description": "Exclude the following files and directories from being auto-documented. Files and directories are relative to your root folder. Files and folders are separated by space. If blank, exclude no files or folders."},
+            "EXCLUDE_PATTERNS": {"type": "string"},
+            "EXAMPLE_PATH": {"type": "string"},
+            "includeApi": {"type": "array","items": {"type": "string"}, "description":"Display only these APIs as your public API. For example, 'api/some_class/some_function'"},
+            "excludeApi": {"type": "array","items": {"type": "string"}, "description":"Exclude these APIs from being displayed in your public API. For example, 'api/some_class/some_function'"},
+            "documentSingleUnderscore": {"type": "boolean", "description": "If true, names that start with a single underscore (e.g. _my-function) will be removed from your API. A convention in Python."},
+            "documentProtected": {"type": "boolean", "description": "Document protected methods."},
+            "documentStatic": {"type": "boolean", "description": "Document static methods."},
+            "FILE_PATTERNS": {"type": "string"},
+            "EXTENSION_MAPPING": {"type": "string"},
+            "ENABLE_PREPROCESSING": {"type": "string", "enum": ["YES", "NO"]},
+            "MACRO_EXPANSION": {"type": "string", "enum": ["YES", "NO"]},
+            "EXPAND_ONLY_PREDEF": {"type": "string", "enum": ["YES", "NO"]},
+            "SEARCH_INCLUDES": {"type": "string", "enum": ["YES", "NO"]},
+            "INCLUDE_PATH": {"type": "string"},
+            "INCLUDE_FILE_PATTERNS": {"type": "string"},
+            "PREDEFINED": {"type": "string"},
+            "EXPAND_AS_DEFINED": {"type": "string"},
+            "SKIP_FUNCTION_MACROS": {"type": "string", "enum": ["YES", "NO"]}
+        }
+      }
+    }
+  }
+}
