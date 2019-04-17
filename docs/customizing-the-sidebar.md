@@ -113,8 +113,8 @@ Multi-level example:
 
 ### Flat level example:
 
-![Flat level example](https://raw.githubusercontent.com/erez-o/try-help/master/images/docs-single_level_sidebar.png)
+![Flat level example](https://raw.githubusercontent.com/erez-o/doxiz/master/images/docs-single_level_sidebar.png)
 
 ### Multi level example:
 
-![Multi level example](https://raw.githubusercontent.com/erez-o/try-help/master/images/docs-multi_level_sidebar.png)
+![Multi level example](https://raw.githubusercontent.com/erez-o/doxiz/master/images/docs-multi_level_sidebar.png)

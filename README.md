@@ -16,25 +16,25 @@ For example, the following screenshots are from the [TinyXml2](http://doxiz.com/
 
 ### Getting started page:
 
-![Getting started](https://raw.githubusercontent.com/erez-o/try-help/master/images/tinyxml2-getting_started.png)
+![Getting started](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-getting_started.png)
 
 <br>
 
 ### Man page for class XMLDocument:
 
-![XMLDocument](https://raw.githubusercontent.com/erez-o/try-help/master/images/tinyxml2-class_xml_document.png)
+![XMLDocument](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-class_xml_document.png)
 
 <br>
 
 ### Man page for function OpenElement:
 
-![GetText1](https://raw.githubusercontent.com/erez-o/try-help/master/images/tinyxml2-open_element_1.png)
+![GetText1](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-open_element_1.png)
 
 <br>
 
 **Page continues...**
 
-![GetText2](https://raw.githubusercontent.com/erez-o/try-help/master/images/tinyxml2-open_element_2.png)
+![GetText2](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-open_element_2.png)
 
 <br>
 
