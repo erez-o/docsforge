@@ -20,7 +20,7 @@ Paths are relative to your repository root directory. You can exclude or include
 
 **Examples:**
 
-1.  Writing the following in the "INPUT" section:
+1.  Writing the following in the `"INPUT"` section:
  
         "autodocSettings": [{
             ...
@@ -31,7 +31,7 @@ Paths are relative to your repository root directory. You can exclude or include
     will create auto-documentation **only** for the directory `src/public` and the file `src/myproj/myproj.h`
     
 
-2.  Writing the following in the "EXCLUDE" section:
+2.  Writing the following in the `"EXCLUDE"` section:
 
         "autodocSettings": [{
             ...
@@ -118,7 +118,7 @@ To name a few, there are:
 
 *   `documentProtected` - Document keyword protected as part of the Public API.
 
-You can view the full list on [autodoc settings](http://doxiz.com/doxiz/master/autodoc-settings).
+You can view the full list on [autodoc settings](https://doxiz.com/doxiz/master/autodoc-settings).
 
 
 Multiple Language Projects

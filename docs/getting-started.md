@@ -1,14 +1,14 @@
 Getting Started
 ===============
 
-[Doxiz](http://doxiz.com/) creates and hosts documentation for your open source projects.
+[Doxiz](https://doxiz.com/) creates and hosts documentation for your open source projects.
 
 It supports both manual documentation pages, and code auto-documentation to create public API pages.
 
 Adding a New Project
 --------------------
 
-When you [add a new project](http://doxiz.com/add-project/choose-host/), you provide a few basic parameters:
+When you [add a new project](https://doxiz.com/add-project/choose-host/), you provide a few basic parameters:
 
 *   A url to where your repository is located.
 
@@ -72,7 +72,7 @@ The configuration file has 2 main parts:
 !!! Tip
     The full public API can be very large and daunting. Focus users to look into the most used API as was done in `Important API` section. Any auto-generated API page can be added to any section.
 
-To learn more, you can learn how to [customize the sidebar](http://doxiz.com/doxiz/master/customizing-the-public-api), [customize the public api](http://doxiz.com/doxiz/master/customizing-the-public-api), or view the full list of [autodoc settings](http://doxiz.com/doxiz/master/autodoc-settings)
+To learn more, you can learn how to [customize the sidebar](https://doxiz.com/doxiz/master/customizing-the-sidebar/), [customize the public api](https://doxiz.com/doxiz/master/customizing-the-public-api), or view the full list of [autodoc settings](https://doxiz.com/doxiz/master/autodoc-settings)
 
 Improving your documentation
 ----------------------------

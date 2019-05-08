@@ -45,7 +45,7 @@ There are several page types that can be created:
 
     To add this type of page to your sidebar, you need to supply a `pageName` that defines the page name, and a `filePath` to where your file is in your repository.
 
-    They can be documentation files (text, markdown, reStructuredTxt), or they can be source files, like the above `schema.json`.
+    They can be documentation files (markdown, reStructuredTxt, html, asciidoc, text), or they can be source code files, like the above `schema.json`.
     
     For example:
     
@@ -58,7 +58,7 @@ There are several page types that can be created:
      
     However, not all API pages are as important as others. Therefore, you can highlight some of them, and insert them to additional sections as well.
     
-    For example: (see [getting started](http://doxiz.com/getting_started/#configuration-file))
+    For example: (see [getting started](https://doxiz.com/getting_started/#configuration-file))
      
         {"apiPath":"my_important_class/my_important_function1"}.
     
@@ -98,6 +98,7 @@ Multi-level example:
                 {"pageName": "Building Version Documentation","filePath": "docs/building-version-documentation.md"}
             ],
             "Child Section2": [
+                {"pageName": "","filePath": "docs/child_section2_content.md"},
                 {"pageName": "Discussions","filePath": "docs/discussions.md"},
                 {"pageName": "Markdown Cheat Sheet","filePath": "docs/markdown-cheat-sheet.md"},
                 {"pageName": "Configuration Schema","filePath": "docs/schema.json"},
@@ -111,6 +112,9 @@ Multi-level example:
 }
 ```
 
+`Child Section1` and `Child Section2` are `directory pages` and will be presented by an expandable directory icon.
+
+
 ### Flat level example:
 
 ![Flat level example](https://raw.githubusercontent.com/erez-o/doxiz/master/images/docs-single_level_sidebar.png)
@@ -118,3 +122,11 @@ Multi-level example:
 ### Multi level example:
 
 ![Multi level example](https://raw.githubusercontent.com/erez-o/doxiz/master/images/docs-multi_level_sidebar.png)
+
+### Adding content to a directory page
+
+The default content of directory pages (for example, `Child Section1` and `Child Section2`) is auto generated. The default content is a simple list of its children pages. 
+
+You can override the auto generated content by supplying the filePath where your content is. This can be done by adding an inner `"pageName":""` or `"pageName":"index"` to the directory. `"pageName":""` and `"pageName":"index"` are synonymous in this regard.
+
+In the above example, `Child Section1` will have an auto generated content, while `Child Section2` will have the content of the markdown page located at `"filePath": "docs/child_section2_content.md"`.

@@ -172,7 +172,7 @@ To sum up, In C `["autodocSettings]["language"]="c"` , the following parameters 
 }
 ```
 
-### Default Configurations for C#
+### Default Configurations for CSharp
 
 To sum up, In C# (`["autodocSettings]["language"]="csharp"`), the following parameters have the following default values:
 

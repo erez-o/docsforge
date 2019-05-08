@@ -1,7 +1,7 @@
 Contact Us
 ==========
 
-[Doxiz](http://doxiz.com/) is currently in Beta.
+[Doxiz](https://doxiz.com/) is currently in Beta.
 
 Bug reports and feature requests are more than welcome.
 
