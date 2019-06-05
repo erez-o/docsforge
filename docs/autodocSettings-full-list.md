@@ -172,7 +172,7 @@ To sum up, In C `["autodocSettings]["language"]="c"` , the following parameters 
 }
 ```
 
-### Default Configurations for CSharp
+### Default Configurations for C# ###
 
 To sum up, In C# (`["autodocSettings]["language"]="csharp"`), the following parameters have the following default values:
 
@@ -256,5 +256,5 @@ Overriding the default configuration
 
 If you wish to override any of the default values, simply add the `key:diff_value` to your json file. 
 
-For example, if your language is C++ and you wish to stop documenting single underscores, then add `"documentSingleUnderscore":false` to your autodocSettings.
+For example, if your language is C++ and you wish to stop documenting single underscores, add `"documentSingleUnderscore":false` to your autodocSettings.
 

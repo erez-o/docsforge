@@ -127,6 +127,6 @@ Multi-level example:
 
 The default content of directory pages (for example, `Child Section1` and `Child Section2`) is auto generated. The default content is a simple list of its children pages. 
 
-You can override the auto generated content by supplying the filePath where your content is. This can be done by adding an inner `"pageName":""` or `"pageName":"index"` to the directory. `"pageName":""` and `"pageName":"index"` are synonymous in this regard.
+You can override the auto generated content by supplying the filePath where your content is. This can be done by adding an inner `"pageName":""` or `"pageName":"index"` or `"pageName":"readme"` to the directory. All three options are synonymous in this regard.
 
 In the above example, `Child Section1` will have an auto generated content, while `Child Section2` will have the content of the markdown page located at `"filePath": "docs/child_section2_content.md"`.
