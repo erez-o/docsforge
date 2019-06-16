@@ -13,9 +13,9 @@ For example, the build log for this project is:
 [0s] Cloning git : git clone --depth 1 --branch master https://github.com/erez-o/doxiz .
 [1s] Finished cloning, Response: 0 - OK
 [1s] Git clone finished, stage 1/6
-[1s] Saving JSON configuration file
+[1s] Saving project YAML configuration file
 [1s] Creating Non API pages, stage 5/6.
-[1s] Json configuration file - content is not in markdown format. using syntax highlighting "json". See "section":"More Info", "pageName":"Configuration Schema", "filePath":"Docs/schema.json".
+[1s] Yaml configuration file - content is not in markdown format. using syntax highlighting "json". See section:"More Info", "Configuration Schema: Docs/schema.json".
 [1s] Your sidebar contains 10 documentation (non API) pages.
 [1s] Replaced old docs with new docs.
 [1s] ======  END  ====== 

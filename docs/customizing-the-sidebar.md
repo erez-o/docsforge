@@ -8,48 +8,47 @@ Example
 -------
 This is the configuration file that creates this help section. 
 
-```JSON
-{
-    "sidebar": {
-        "Basic Tutorial": [
-            {"pageName": "Getting Started","filePath": "docs/getting-started.md"},
-            {"pageName": "Customizing The Sidebar","filePath": "docs/customizing-the-sidebar.md"},
-            {"pageName": "Customizing The Public Api","filePath": "docs/customizing-the-public-api.md"}
-        ],
-        "More Info": [
-            {"pageName": "Autodoc Settings","filePath": "docs/autodocSettings-full-list.md"},
-            {"pageName": "Building Version Documentation","filePath": "docs/building-version-documentation.md"},
-            {"pageName": "Discussions","filePath": "docs/discussions.md"},
-            {"pageName": "Markdown Cheat Sheet","filePath": "docs/markdown-cheat-sheet.md"},
-            {"pageName": "Configuration Schema","filePath": "docs/schema.json"},
-            {"pageName": "Feature Requests","url": "https://github.com/erez-o/doxiz/issues"},
-            {"pageName": "Contact Us","filePath": "docs/contact-us.md"}
-        ]
-    },
-    "autodocSettings": []
-}
+```yaml
+sidebar:
+  Basic Tutorial:
+  - Getting Started: docs/getting-started.md
+  - Customizing The Sidebar: docs/customizing-the-sidebar.md
+  - Customizing The Public Api: docs/customizing-the-public-api.md
+  - Discussions: docs/discussions.md
+  - Themes and CSS: docs/themes-and-css.md
+  More Info:
+  - Autodoc Settings: docs/autodocSettings-full-list.md
+  - Building Version Documentation: docs/building-version-documentation.md
+  - Markdown Cheat Sheet: docs/markdown-cheat-sheet.md
+  - Configuration Schema: docs/schema.json
+  - Changelog: docs/changelog.md
+  - Contact Us: docs/contact-us.md
+  - Feature Requests: https://github.com/erez-o/doxiz/issues
+autodocSettings: {}
 ```
 
-The above Json file defines:
+The above yaml configuration file defines:
 
-1.  A `sidebar` that contains multiple sections, the 1st being "Basic Tutorial". Each section contains multiple pages.
+1.  A `sidebar` that contains two sections - "Basic Tutorial" and "More Info". Each section contains multiple pages.
 
 2.  A blank `AutodocSettings`, because this project contains no auto code documentation.
 
 
 Page Types
 ----------
+To add pages to sections, you need to supply a simple `key: value`. `key` is the name of the page, and `value` is how to retrieve its data.
+
 There are several page types that can be created:
 
-1. **Documentation page**.
+1. **Documentation page from your repo**.
 
-    To add this type of page to your sidebar, you need to supply a `pageName` that defines the page name, and a `filePath` to where your file is in your repository.
+    To add this type of page to your sidebar, you need to supply a `key` that defines the page name, and a `value` that defines that file path to where your file is in your repository.
 
-    They can be documentation files (markdown, reStructuredTxt, html, asciidoc, text), or they can be source code files, like the above `schema.json`.
+    File path can be a documentation file (markdown, reStructuredTxt, html, asciidoc, text), or a source code file, like the above `schema.json`.
     
     For example:
     
-        {"pageName": "Customizing The Sidebar","filePath": "docs/customizing-the-sidebar.md"},
+        "Customizing The Sidebar": "docs/customizing-the-sidebar.md"
 
 
 2. **API page**
@@ -60,20 +59,20 @@ There are several page types that can be created:
     
     For example: (see [getting started](https://doxiz.com/getting_started/#configuration-file))
      
-        {"apiPath":"my_important_class/my_important_function1"}.
+        "my_important_function1":"api/my_important_class/my_important_function1"
     
-    (*) This assumes you have function `my_important_class` inside class `my_important_function1`. Also note the lack of `pageName`, as the name of a public API page is known (in this case, it's "Function my_important_function1").
+    (*) This assumes you have function `my_important_class` inside class `my_important_function1`, and `baseUrl: api` in your `autodocSettings`.
 
     !!! tip
-        To make things simpler, on every public API page, there's a <code><i class="fa fa-star-o"></i></code> icon that will add the page to the `Important API` section in the json configuration file.
+        To make things simpler, on every public API page, there's a <code><i class="fa fa-star-o"></i></code> icon that will add the page to the `Important API` section in the yaml configuration file.
 
 3. **Link page**
 
-    To add this type of page to your sidebar, you need to supply a `pageName` that defines the page name, and a `url` to the full http you wish to link to. 
+    To add this type of page to your sidebar, you need to supply a `key` that defines the page name, and a `value` to the to the full url you wish to link to. 
     
     For example: 
     
-        {"pageName": "Contact us","url": "http://example.com/contact-us/"}
+        "Contact us": "http://example.com/contact-us/"
         
         
 Multi Level Sections
@@ -83,33 +82,24 @@ The [example](#example) mentioned previously creates a flat single level section
 
 Multi-level example:
 
-```JSON
-{
-    "sidebar": {
-        "Flat Section": [
-            {"pageName": "Getting Started","filePath": "docs/getting-started.md"},
-            {"pageName": "Customizing The Sidebar","filePath": "docs/customizing-the-sidebar.md"},
-            {"pageName": "Customizing The Public Api","filePath": "docs/customizing-the-public-api.md"}
-        ],
-        "Parent Section": [
-          {
-            "Child Section1": [
-                {"pageName": "Autodoc Settings","filePath": "docs/autodocSettings-full-list.md"},
-                {"pageName": "Building Version Documentation","filePath": "docs/building-version-documentation.md"}
-            ],
-            "Child Section2": [
-                {"pageName": "","filePath": "docs/child_section2_content.md"},
-                {"pageName": "Discussions","filePath": "docs/discussions.md"},
-                {"pageName": "Markdown Cheat Sheet","filePath": "docs/markdown-cheat-sheet.md"},
-                {"pageName": "Configuration Schema","filePath": "docs/schema.json"},
-                {"pageName": "Feature Requests","url": "https://github.com/erez-o/doxiz/issues"},
-                {"pageName": "Contact Us","filePath": "docs/contact-us.md"}
-            ]
-          }
-        ]
-    },
-    "autodocSettings": []
-}
+```yaml
+sidebar:
+  Flat Section:
+  - Getting Started: docs/getting-started.md
+  - Customizing The Sidebar: docs/customizing-the-sidebar.md
+  - Customizing The Public Api: docs/customizing-the-public-api.md
+  Parent Section:
+  - Child Section1:
+    - Autodoc Settings: docs/autodocSettings-full-list.md
+    - Building Version Documentation: docs/building-version-documentation.md
+    Child Section2:
+    - index: docs/child_section2_content.md
+    - Discussions: docs/discussions.md
+    - Markdown Cheat Sheet: docs/markdown-cheat-sheet.md
+    - Configuration Schema: docs/schema.json
+    - Feature Requests: https://github.com/erez-o/doxiz/issues
+    - Contact Us: docs/contact-us.md
+autodocSettings: {}
 ```
 
 `Child Section1` and `Child Section2` are `directory pages` and will be presented by an expandable directory icon.
@@ -127,6 +117,6 @@ Multi-level example:
 
 The default content of directory pages (for example, `Child Section1` and `Child Section2`) is auto generated. The default content is a simple list of its children pages. 
 
-You can override the auto generated content by supplying the filePath where your content is. This can be done by adding an inner `"pageName":""` or `"pageName":"index"` or `"pageName":"readme"` to the directory. All three options are synonymous in this regard.
+You can override the auto generated content by supplying the filePath where your content is. This can be done by adding an inner `key` page name `index`,`readme` or blank `` to the directory. All three options are synonymous in this regard.
 
-In the above example, `Child Section1` will have an auto generated content, while `Child Section2` will have the content of the markdown page located at `"filePath": "docs/child_section2_content.md"`.
+In the above example, `Child Section1` will have an auto generated content, while `Child Section2` will have the content of the markdown page located at `docs/child_section2_content.md`.

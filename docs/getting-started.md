@@ -23,49 +23,42 @@ We then link to your repository, extract documentation files that were written m
 Configuration File
 ------------------
 
-Each project has a configuration file that defines how to build the documentation. 
+Each project has a configuration file that defines how to build the documentation. The configuration file format is written in YAML.
 
 When you add a new project, we create a configuration file to get you started.
 
 An example configuration file:
 
-```json
-{
-    "sidebar": {
-        "Basic Tutorial": [
-            {"pageName": "Getting Started","filePath": "readme.md"},
-            {"pageName": "Installation","filePath": "docs/readme.md"}         
-        ],
-        "Advanced Tutorial": [
-            {"pageName": "Frequently Asked Questions","filePath": "docs/faq.md"},
-            {"pageName": "Advanced Topics","filePath": "docs/advanced.md"},
-            {"pageName": "Code Example 1","filePath": "src/my_example.cpp"}, 
-            {"pageName": "Contact us","url": "http://example.com/contact-us/"}
-        ],        
-        "Important API": [
-            {"apiPath": "api/my_important_class/my_important_function1"},
-            {"apiPath": "api/my_important_function2"}
-        ]
-    },
-    "autodocSettings": [
-        {
-            "sectionName": "Public API",
-            "baseUrl": "api",
-            "language": "cpp",
-            "INPUT": "src",
-            "EXCLUDE": "tests examples",
-            "excludeApi": ["some_class1", "some_func2"],
-            "documentSingleUnderscore": true,
-            "documentStatic": true,
-            "documentProtected": true
-        }
-    ]
-}
+```yaml
+sidebar:
+  Basic Tutorial:
+  - Getting Started: readme.md
+  - Installation: docs/readme.md
+  Advanced Tutorial:
+  - Frequently Asked Questions: docs/faq.md
+  - Advanced Topics: docs/advanced.md
+  - Code Example 1: src/my_example.cpp
+  - Contact us: http://example.com/contact-us/
+  Important API:
+  - my_important_function1: api/my_important_class/my_important_function1
+  - my_important_function2: api/my_important_function2
+autodocSettings:
+  Public API:
+    baseUrl: api
+    language: cpp
+    INPUT: src
+    EXCLUDE: tests examples
+    excludeApi:
+    - an_unimportant_public_class
+    - an_unimportant_public_func
+    documentSingleUnderscore: true
+    documentStatic: true
+    documentProtected: true
 ```
 
 The configuration file has 2 main parts:
 
-*   `sidebar` - defines the documentation layout - which sections and pages will appear in your sidebar. Most pages will be text files (.txt, .md, .rst) or auto-generated API pages. 
+*   `sidebar` - defines the documentation layout - which sections and pages will appear in your sidebar. Pages can either be text files (.txt, .md, .rst) or API pages (created automatically).
 
 *   `autodocSettings` - defines which parts of your public API will be displayed - which source files to document, which to exclude, whether to document names that start with a single underscore, etc...
 

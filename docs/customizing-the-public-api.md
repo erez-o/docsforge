@@ -6,9 +6,9 @@ Customizing The Public Api
 
 When you add a new project, The default is to create pages for **any public** function/class/etc... found in your repository.
 
-In some projects, there are too many public API pages, and it can confuse end users.
+In some projects, there are too many public API pages, and it can confuse end users. End users mainly want the most used top level public API.
 
-The `autodocSettings` in your Json configuration file helps you to customize which parts of your public API you wish to display, and which you wish to hide.
+The `autodocSettings` in your Yaml configuration file helps you to customize which parts of your public API you wish to display, and which you wish to hide.
 
 There are various customization options.
 
@@ -21,34 +21,34 @@ Paths are relative to your repository root directory. You can exclude or include
 **Examples:**
 
 1.  Writing the following in the `"INPUT"` section:
- 
-        "autodocSettings": [{
+
+        autodocSettings:
+          Public API:
             ...
-            "INPUT": "src/public src/myproj/myproj.h",
+            INPUT: "src/public src/myproj/myproj.h",
             ...
-        }]
 
     will create auto-documentation **only** for the directory `src/public` and the file `src/myproj/myproj.h`
     
 
 2.  Writing the following in the `"EXCLUDE"` section:
 
-        "autodocSettings": [{
+        autodocSettings:
+          Public API:
             ...
-            "EXCLUDE": "tests",
+            EXCLUDE: "tests"
             ...
-        }]
 
     will result in the auto-documentation disregarding any source code written in the `tests` directory.
     
 3.  If both include and exclude conditions exist, both will be met.
 
-        "autodocSettings": [{
+        autodocSettings:
+          Public API:
             ...
-            "INPUT": "src/public src/myproj/myproj.h",
-            "EXCLUDE": "tests",
+            INPUT": "src/public src/myproj/myproj.h"
+            EXCLUDE: "tests"
             ...
-        }]
 
 Exclude or Include Specific API Pages
 -------------------------------------
@@ -60,7 +60,7 @@ You can exclude or include specific public API pages (functions, classes, namesp
 
 A public API page is defined by it's **page_path** - a concatenation of **all** the scopes (functions, classes, namespaces, etc...) that led to the page. 
 
-For example: `my_class/my_func`.
+For example: `api/my_class/my_func`.
 
 You can exclude or include multiple api pages by seperating between them with a comma. 
 
@@ -68,11 +68,14 @@ You can exclude or include multiple api pages by seperating between them with a 
 
 1.  Writing the following in the excluded_paths section:
 
-        "autodocSettings": [{
+        autodocSettings:
+          Public API:
+            baseUrl: api
             ...
-            "excludeApi": ["my_namespace/my_class/my_func", "my_namespace/my_other_class"],
+            excludeApi":
+            - "api/my_namespace/my_class/my_func"
+            - "api/my_namespace/my_other_class"
             ...
-        }]
 
     will exclude `my_func` and `my_other_class` (and all it's methods, see note.).
 
@@ -85,22 +88,28 @@ You can exclude or include multiple api pages by seperating between them with a 
 
 2.  Writing the following condition in the included_paths section:
 
-        "autodocSettings": [{
+        autodocSettings:
+          Public API:
+            baseUrl: api
             ...
-            "includeApi": ["my_other_namespace"],
+            includeApi":
+            - "api/my_other_namespace"
             ...
-        }]
 
     will create documentation only of API pages that are inside the scope `my_other_namespace`.
 
 3.  If both includeApi and excludeApi conditions exist, both will be met.
 
-        "autodocSettings": [{
+        autodocSettings:
+          Public API:
+            baseUrl: api
             ...
-            "includeApi": ["my_other_namespace"],
-            "excludeApi": ["my_namespace/my_other_class", "my_other_namespace/my_class/my_func"],
+            includeApi":
+            - "api/my_other_namespace"
+            excludeApi":
+            - "api/my_namespace/my_class/my_func"
+            - "api/my_namespace/my_other_class"
             ...
-        }]
     
     only `my_other_namespace` will be documented, `my_class/my_func` inside it will be excluded, and the exclusion `my_namespace/my_other_class` will be ignored since it's not under `my_other_namespace` in the first place. 
     
@@ -128,34 +137,30 @@ Some code projects have multiple languages (for example C++ and Python). You can
 
 For example:
 
-```json
-{
-    "autodocSettings": [
-        {
-            "sectionName": "Public API C++",
-            "baseUrl": "api-cpp",
-            "language": "cpp",
-            "INPUT": "src/cpp",
-            "EXCLUDE": "tests/cpp examples/cpp",
-            "excludeApi": ["some_cpp_class", "some_func"],
-            "documentSingleUnderscore": true,
-            "documentStatic": true,
-            "documentProtected": true
-        },
-        {
-            "sectionName": "Public API Python",
-            "baseUrl": "api-python",
-            "language": "python",
-            "INPUT": "src/python",
-            "EXCLUDE": "tests/python examples/python setup.py test.py tests.py",
-            "includeApi": [],
-            "excludeApi": ["some_python_class"],
-            "documentSingleUnderscore": false,
-            "documentStatic": true,
-            "documentProtected": true
-        } 
-    ]
-}
+```yaml
+autodocSettings:
+  Public API C++:
+    baseUrl: api-cpp
+    language: cpp
+    INPUT: src/cpp
+    EXCLUDE: tests/cpp examples/cpp
+    excludeApi:
+    - some_cpp_class
+    - some_func
+    documentSingleUnderscore: true
+    documentStatic: true
+    documentProtected: true
+  Public API Python:
+    baseUrl: api-python
+    language: python
+    INPUT: src/python
+    EXCLUDE: "tests/python examples/python setup.py test.py tests.py"
+    includeApi: []
+    excludeApi:
+    - some_python_class
+    documentSingleUnderscore: false
+    documentStatic: true
+    documentProtected: true
 ```
 
 Grouping
@@ -165,31 +170,30 @@ Some projects consist of relatively separated modules. You can auto-document eac
 
 For example:
 
-```json
-{
-    "autodocSettings": [
-        {
-            "sectionName": "Public API Module1",
-            "baseUrl": "api-module1",
-            "language": "cpp",
-            "INPUT": "src/module1",
-            "EXCLUDE": "tests/module1",
-            "excludeApi": ["some_cpp_class1", "some_func1"],
-            "documentSingleUnderscore": true,
-            "documentStatic": true,
-            "documentProtected": true
-        },
-        {
-            "sectionName": "Public API Module2",
-            "baseUrl": "api-module2",
-            "language": "cpp",
-            "INPUT": "src/module2",
-            "EXCLUDE": "tests/module2",
-            "excludeApi": ["some_cpp_class2", "some_func2"],
-            "documentSingleUnderscore": true,
-            "documentStatic": true,
-            "documentProtected": true
-        }
-    ]
-}
+```yaml
+autodocSettings:
+  Public API Module1:
+    baseUrl: api-module1
+    language: cpp
+    INPUT: src/module1
+    EXCLUDE: tests/module1
+    includeApi: []
+    excludeApi:
+    - some_cpp_class
+    - some_func
+    documentSingleUnderscore: true
+    documentStatic: true
+    documentProtected: true
+  Public API Module2:
+    baseUrl: api-module2
+    language: cpp
+    INPUT: src/module2
+    EXCLUDE: "tests/python examples/python setup.py test.py tests.py"
+    includeApi: []
+    excludeApi:
+    - some_cpp_class
+    - some_func
+    documentSingleUnderscore: false
+    documentStatic: true
+    documentProtected: true
 ```

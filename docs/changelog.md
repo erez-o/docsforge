@@ -1,11 +1,19 @@
 # Changelog
 
+## 3.1.0 (16th Jun 2019)
+
+- Project configuration file changed from JSON to YAML to improve editing and readability.
+- Docs edited to reflect change.
+- Improved displayed build log.
+- Updated highlight.js to 9.15.8.
+- Internal: Improved update scripts.
+
 ## 3.0.13 (6th Jun 2019)
 
-- Fixed sidebar bug on ipad.
+- Fixed javascript sidebar bug on ipad.
 - Improved css of themes.
 - Changed Public API sections to internal directories
-- Internal: Improved testing, added prettify_json for testing.
+- Internal: Improved testing, added prettify_json for testing, improved update scripts.
 
 ## 3.0.12 (31th May 2019)
 

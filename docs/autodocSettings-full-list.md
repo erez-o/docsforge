@@ -123,138 +123,107 @@ To sum up the above information, we summarize the defaults for each language:
 
 ### Default Configurations for C++
 
-In C++ (`["autodocSettings]["language"]="cpp"`), the following parameters have the following default values:
+In C++ (`["autodocSettings][SectionName]["language"]="cpp"`), the following parameters have the following default values:
 
-```JSON
-{
-    "autodocSettings": {
-        "documentSingleUnderscore": true,
-        "documentProtected": true,
-        "FILE_PATTERNS": "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm",
-        "EXTENSION_MAPPING": "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c",
-        
-        "ENABLE_PREPROCESSING": "YES",
-        "MACRO_EXPANSION": "YES",
-        "EXPAND_ONLY_PREDEF": "NO",
-        "SEARCH_INCLUDES": "YES",
-        "INCLUDE_PATH": "",
-        "INCLUDE_FILE_PATTERNS": "",
-        "PREDEFINED": "",
-        "EXPAND_AS_DEFINED": "",
-        "SKIP_FUNCTION_MACROS": "YES"
-    }
-}
+```yaml
+autodocSettings:
+  Public API:
+    documentSingleUnderscore: true
+    documentProtected: true
+    FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
+    EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
+    ENABLE_PREPROCESSING: 'YES'
+    MACRO_EXPANSION: 'YES'
+    EXPAND_ONLY_PREDEF: 'NO'
+    SEARCH_INCLUDES: 'YES'
+    INCLUDE_PATH: ''
+    INCLUDE_FILE_PATTERNS: ''
+    PREDEFINED: ''
+    EXPAND_AS_DEFINED: ''
+    SKIP_FUNCTION_MACROS: 'YES'
 ```
 
 ### Default Configurations for C
 
-To sum up, In C `["autodocSettings]["language"]="c"` , the following parameters have the following default values:
+To sum up, In C `["autodocSettings][SectionName]["language"]="c"` , the following parameters have the following default values:
 
-```JSON
-{
-    "autodocSettings": {
-        "documentSingleUnderscore": true,
-        "documentStatic": false,
-        "documentProtected": true,
-        "FILE_PATTERNS": "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm",
-        "EXTENSION_MAPPING": "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c",
-        
-        "ENABLE_PREPROCESSING": "YES",
-        "MACRO_EXPANSION": "YES",
-        "EXPAND_ONLY_PREDEF": "NO",
-        "SEARCH_INCLUDES": "YES",
-        "INCLUDE_PATH": "",
-        "INCLUDE_FILE_PATTERNS": "",
-        "PREDEFINED": "",
-        "EXPAND_AS_DEFINED": "",
-        "SKIP_FUNCTION_MACROS": "YES"
-    }
-}
+```yaml
+autodocSettings:
+  PublicAPI:
+    documentSingleUnderscore: true
+    documentStatic: false
+    documentProtected: true
+    FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
+    EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
+    ENABLE_PREPROCESSING: 'YES'
+    MACRO_EXPANSION: 'YES'
+    EXPAND_ONLY_PREDEF: 'NO'
+    SEARCH_INCLUDES: 'YES'
+    INCLUDE_PATH: ''
+    INCLUDE_FILE_PATTERNS: ''
+    PREDEFINED: ''
+    EXPAND_AS_DEFINED: ''
+    SKIP_FUNCTION_MACROS: 'YES'
 ```
 
 ### Default Configurations for C# ###
 
-To sum up, In C# (`["autodocSettings]["language"]="csharp"`), the following parameters have the following default values:
+To sum up, In C# (`["autodocSettings][SectionName]["language"]="csharp"`), the following parameters have the following default values:
 
-```JSON
-{
-    "autodocSettings": {
-        "documentSingleUnderscore": true,
-        "documentProtected": true,
-        "FILE_PATTERNS": "*.cs",
-        "EXTENSION_MAPPING": "cs=csharp",
-        
-        "ENABLE_PREPROCESSING": "YES",
-        "MACRO_EXPANSION": "YES",
-        "EXPAND_ONLY_PREDEF": "NO",
-        "SEARCH_INCLUDES": "YES",
-        "INCLUDE_PATH": "",
-        "INCLUDE_FILE_PATTERNS": "",
-        "PREDEFINED": "",
-        "EXPAND_AS_DEFINED": "",
-        "SKIP_FUNCTION_MACROS": "YES"
-    }
-}
+```yaml
+autodocSettings:
+  Public API:
+    documentSingleUnderscore: true
+    documentProtected: true
+    FILE_PATTERNS: "*.cs"
+    EXTENSION_MAPPING: cs=csharp
+    ENABLE_PREPROCESSING: 'YES'
+    MACRO_EXPANSION: 'YES'
+    EXPAND_ONLY_PREDEF: 'NO'
+    SEARCH_INCLUDES: 'YES'
+    INCLUDE_PATH: ''
+    INCLUDE_FILE_PATTERNS: ''
+    PREDEFINED: ''
+    EXPAND_AS_DEFINED: ''
+    SKIP_FUNCTION_MACROS: 'YES'
 ```
 
 ### Default Configurations for Java
 
-To sum up, In Java (`["autodocSettings]["language"]="java"`), the following parameters have the following default values:
+To sum up, In Java (`["autodocSettings][SectionName]["language"]="java"`), the following parameters have the following default values:
 
-```JSON
-{
-    "autodocSettings": {
-        "documentSingleUnderscore": true,
-        "documentProtected": true,
-        "FILE_PATTERNS": "*.java",
-        "EXTENSION_MAPPING": "java=java",
-        
-        #not relevant for this language:
-        "ENABLE_PREPROCESSING": "NO",
-        "MACRO_EXPANSION": "NO",
-        "EXPAND_ONLY_PREDEF": "NO",
-        "SEARCH_INCLUDES": "NO",
-        "INCLUDE_PATH": "",
-        "INCLUDE_FILE_PATTERNS": "",
-        "PREDEFINED": "",
-        "EXPAND_AS_DEFINED": "",
-        "SKIP_FUNCTION_MACROS": "NO"
-    }
-}
+```yaml
+autodocSettings:
+  Public API:
+    documentSingleUnderscore: true
+    documentProtected: true
+    FILE_PATTERNS: "*.java"
+    EXTENSION_MAPPING: java=java
 ```
+
+The keys `MACRO_EXPANSION`, `EXPAND_ONLY_PREDEF`, `SEARCH_INCLUDES`, `INCLUDE_PATH`, `INCLUDE_FILE_PATTERNS`, `PREDEFINED`, `EXPAND_AS_DEFINED` and `SKIP_FUNCTION_MACROS` are not relevant for this language. 
 
 ### Default Configurations for Python
 
-To sum up, In Python (`["autodocSettings]["language"]="python"`), the following parameters have the following default values:
+To sum up, In Python (`["autodocSettings][Section]["language"]="python"`), the following parameters have the following default values:
 
-```JSON
-{
-    "autodocSettings": {
-        "documentSingleUnderscore": false,
-        "documentProtected": true,
-        "FILE_PATTERNS": "*.py *.pyw",
-        "EXTENSION_MAPPING": "py=python pyw=python",
-        
-        #not relevant for this language:
-        "ENABLE_PREPROCESSING": "NO",
-        "MACRO_EXPANSION": "NO",
-        "EXPAND_ONLY_PREDEF": "NO",
-        "SEARCH_INCLUDES": "NO",
-        "INCLUDE_PATH": "",
-        "INCLUDE_FILE_PATTERNS": "",
-        "PREDEFINED": "",
-        "EXPAND_AS_DEFINED": "",
-        "SKIP_FUNCTION_MACROS": "NO"
-    }
-}
+```yaml
+autodocSettings:
+  Public API:
+    documentSingleUnderscore: false
+    documentProtected: true
+    FILE_PATTERNS: "*.py *.pyw"
+    EXTENSION_MAPPING: "py=python pyw=python"
 ```
+
+The keys `MACRO_EXPANSION`, `EXPAND_ONLY_PREDEF`, `SEARCH_INCLUDES`, `INCLUDE_PATH`, `INCLUDE_FILE_PATTERNS`, `PREDEFINED`, `EXPAND_AS_DEFINED` and `SKIP_FUNCTION_MACROS` are not relevant for this language. 
 
 
 
 Overriding the default configuration
 ------------------------------------
 
-If you wish to override any of the default values, simply add the `key:diff_value` to your json file. 
+If you wish to override any of the default values, simply add the `key:diff_value` to your yaml configuration file. 
 
 For example, if your language is C++ and you wish to stop documenting single underscores, add `"documentSingleUnderscore":false` to your autodocSettings.
 
