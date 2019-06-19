@@ -76,6 +76,7 @@ sidebar:
   Important API:
   - my_important_function1: api/my_important_class/my_important_function1
   - my_important_function2: api/my_important_function2
+  
 autodocSettings:
   Public API:
     baseUrl: api

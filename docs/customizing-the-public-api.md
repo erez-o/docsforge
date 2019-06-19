@@ -8,7 +8,7 @@ When you add a new project, The default is to create pages for **any public** fu
 
 In some projects, there are too many public API pages, and it can confuse end users. End users mainly want the most used top level public API.
 
-The `autodocSettings` in your Yaml configuration file helps you to customize which parts of your public API you wish to display, and which you wish to hide.
+The `autodocSettings` in your Yaml configuration file helps you customize which parts of your public API you wish to display, and which you wish to hide.
 
 There are various customization options.
 
@@ -128,6 +128,21 @@ To name a few, there are:
 *   `documentProtected` - Document keyword protected as part of the Public API.
 
 You can view the full list on [autodoc settings](https://doxiz.com/doxiz/master/autodoc-settings).
+
+Default AutodocSettings Per Language
+------------------------------------
+
+We've prepared a list of default autodocSettings per lanuage:
+
+- [Default autodocSettings for C++](https://doxiz.com/doxiz/master/autodoc-settings/#default-configurations-for-c_1)
+
+- [Default autodocSettings for C](https://doxiz.com/doxiz/master/autodoc-settings/#default-configurations-for-c)
+
+- [Default autodocSettings for C#](https://doxiz.com/doxiz/master/autodoc-settings/#default-configurations-for-c_2)
+
+- [Default autodocSettings for Python](https://doxiz.com/doxiz/master/autodoc-settings/#default-configurations-for-python)
+
+- [Default autodocSettings for Java](https://doxiz.com/doxiz/master/autodoc-settings/#default-configurations-for-java)
 
 
 Multiple Language Projects

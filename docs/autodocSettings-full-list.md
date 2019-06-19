@@ -1,6 +1,10 @@
 Auto Documentation Configuration Settings
 =========================================
 
+baseUrl
+:   The base Url path of every API page in this section.Especially needed if there are multiple public API sections. Each section should have a different baseUrl to avoid url collision between apis.  
+    The default value is: "api"
+
 language
 :   The programming language for the auto-documentation.  
     Available values are: c, cpp, csharp, java, python
@@ -21,7 +25,7 @@ EXCLUDE_PATTERNS
     The default value is: ""
 
 EXAMPLE_PATH
-:   Example path
+:   Example path  
     The default value is: ""
 
 Exclude Include API by name
@@ -61,13 +65,13 @@ documentSingleUnderscore
 documentStatic
 :   Document keyword static as part of the Public API.  
     If False, objects like `static myfunction()` will be regarded as private and not be documented.  
-    The default for C is: True  
-    The default for other languages: False
+    The default for C is: false  
+    The default for other languages: true
 
 documentProtected
 :   Document keyword protected as part of the Public API.  
     If False, objects with permission level "protected" will not be documented.  
-    The default value is: True
+    The default value is: true
 
 
 PreProcessing
@@ -127,9 +131,21 @@ In C++ (`["autodocSettings][SectionName]["language"]="cpp"`), the following para
 
 ```yaml
 autodocSettings:
-  Public API:
+  PublicAPI:
+    baseUrl: api
+    language: cpp
+    INPUT: ""                 # paths to source files and directories to auto document, for example, "src include"
+    EXCLUDE: ""               # paths to exclude , for example "test tests examples"
+    EXCLUDE_PATTERNS: ''      # for example, */tests/* */test/*
+    EXAMPLE_PATH: ""          # for example, "examples"
+    includeApi: []
+    excludeApi: []
     documentSingleUnderscore: true
+    documentStatic: true
     documentProtected: true
+
+    # The following parameters are usually good for 99% of projects. 
+    # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
     EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
     ENABLE_PREPROCESSING: 'YES'
@@ -150,9 +166,20 @@ To sum up, In C `["autodocSettings][SectionName]["language"]="c"` , the followin
 ```yaml
 autodocSettings:
   PublicAPI:
+    baseUrl: api
+    language: c
+    INPUT: ""                 # paths to source files and directories to auto document, for example, "src include"
+    EXCLUDE: ""               # paths to exclude , for example "test tests examples"
+    EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
+    EXAMPLE_PATH: ""          # for example, "examples"
+    includeApi: []
+    excludeApi: []
     documentSingleUnderscore: true
     documentStatic: false
     documentProtected: true
+  
+    # The following parameters are usually good for 99% of projects. 
+    # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
     EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
     ENABLE_PREPROCESSING: 'YES'
@@ -173,10 +200,22 @@ To sum up, In C# (`["autodocSettings][SectionName]["language"]="csharp"`), the f
 ```yaml
 autodocSettings:
   Public API:
+    baseUrl: api
+    language: csharp
+    INPUT: ""                 # paths to source files and directories to auto document
+    EXCLUDE: ""               # paths to exclude , for example "test tests examples"
+    EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
+    EXAMPLE_PATH: ""          # for example, "examples"
+    includeApi: []
+    excludeApi: []
     documentSingleUnderscore: true
+    documentStatic: true
     documentProtected: true
+  
+    # The following parameters are usually good for 99% of projects. 
+    # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.cs"
-    EXTENSION_MAPPING: cs=csharp
+    EXTENSION_MAPPING: "cs=csharp"
     ENABLE_PREPROCESSING: 'YES'
     MACRO_EXPANSION: 'YES'
     EXPAND_ONLY_PREDEF: 'NO'
@@ -195,10 +234,22 @@ To sum up, In Java (`["autodocSettings][SectionName]["language"]="java"`), the f
 ```yaml
 autodocSettings:
   Public API:
+    baseUrl: api
+    language: java
+    INPUT: ""                 # paths to source files and directories to auto document
+    EXCLUDE: ""               # paths to exclude , for example "test tests examples"
+    EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
+    EXAMPLE_PATH: ""          # for example, "examples"
+    includeApi: []
+    excludeApi: []
     documentSingleUnderscore: true
+    documentStatic: true
     documentProtected: true
+  
+    # The following parameters are usually good for 99% of projects. 
+    # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.java"
-    EXTENSION_MAPPING: java=java
+    EXTENSION_MAPPING: "java=java"
 ```
 
 The keys `MACRO_EXPANSION`, `EXPAND_ONLY_PREDEF`, `SEARCH_INCLUDES`, `INCLUDE_PATH`, `INCLUDE_FILE_PATTERNS`, `PREDEFINED`, `EXPAND_AS_DEFINED` and `SKIP_FUNCTION_MACROS` are not relevant for this language. 
@@ -210,8 +261,20 @@ To sum up, In Python (`["autodocSettings][Section]["language"]="python"`), the f
 ```yaml
 autodocSettings:
   Public API:
+    baseUrl: api
+    language: python
+    INPUT: ""                 # paths to source files and directories to auto document
+    EXCLUDE: ""               # paths to exclude , for example "test tests examples setup.py"
+    EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
+    EXAMPLE_PATH: ""          # for example, "examples"
+    includeApi: []
+    excludeApi: []
     documentSingleUnderscore: false
+    documentStatic: true
     documentProtected: true
+
+    # The following parameters are usually good for 99% of projects. 
+    # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.py *.pyw"
     EXTENSION_MAPPING: "py=python pyw=python"
 ```

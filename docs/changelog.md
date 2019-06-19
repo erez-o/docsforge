@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.1 (17th Jun 2019)
+
+- Brief descriptions appended to detailed description start if not too similar.
+- Maximum allowed project tags incrased to 10.
+
 ## 3.1.0 (16th Jun 2019)
 
 - Project configuration file changed from JSON to YAML to improve editing and readability.
