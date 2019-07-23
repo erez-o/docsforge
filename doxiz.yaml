@@ -7,9 +7,9 @@ sidebar:
   - Themes and CSS: docs/themes-and-css.md
   More Info:
   - Autodoc Settings: docs/autodocSettings-full-list.md
+  - Additional Settings: docs/additionalSettings.md
   - Building Version Documentation: docs/building-version-documentation.md
   - Markdown Cheat Sheet: docs/markdown-cheat-sheet.md
   - Changelog: docs/changelog.md
   - Contact Us: docs/contact-us.md
   - Feature Requests: https://github.com/erez-o/doxiz/issues
-autodocSettings: {}
