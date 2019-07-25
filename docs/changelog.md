@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.6 (25th Jul 2019)
+
+- Public API pages now have a summary of their childes.
+
+- Dark theme sidebar is now always visible. 
+
+- Improved extra project css.
+
 ## 3.1.5 (23rd Jul 2019)
 
 - Important APIs are now created automatically if new project. Done by scanning project markdown pages for references to apis similar to `autolink`.
