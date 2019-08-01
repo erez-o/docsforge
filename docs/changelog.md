@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.7 (1st Aug 2019)
+
+- Improved linkifying, upgraded Bleach.
+
+- Improved css for plaintext files.
+
 ## 3.1.6 (25th Jul 2019)
 
 - Public API pages now have a summary of their childes.
