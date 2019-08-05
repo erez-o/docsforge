@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.9 (5th Aug 2019)
+
+- Source files that are too big (> 1MB) will now appear without syntax highlighting.
+
+## 3.1.8 (4th Aug 2019)
+
+- Added `extractNonDocComments`, an option to extract all code comments even if they do not start with `///` or `/**`
+
 ## 3.1.7 (1st Aug 2019)
 
 - Improved linkifying, upgraded Bleach.
