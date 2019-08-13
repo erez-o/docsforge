@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.1.10 (13th Aug 2019)
+
+- Improved member documentation if `extractNonDocComments=true`.
+
+- Improved next / prev page.
+
+- Added a few more license options.
+
+- Changed serveral default keys in cfg (ENABLE_PREPROCESSING, MACRO_EXPANSION, ...)
+
+- Allowing support for non ascii characters in cfg and sidebar.
+
+- Sidebar namespace/classes/functions are more sorted.
+
 ## 3.1.9 (5th Aug 2019)
 
 - Source files that are too big (> 1MB) will now appear without syntax highlighting.

@@ -21,44 +21,78 @@ Available values are: c, cpp, csharp, java, python
 Exclude Include Directories and Files
 -------------------------------------
 
+!!! note
+    The following keys allows control over which files and directories you wish to auto document.
+    
+    For more examples, see [here](https://doxiz.com/doxiz/master/customizing-the-public-api/#exclude-or-include-files-and-directories)
+    
 ### INPUT ###
 
-Input directories and files.  
+The INPUT tag is used to specify the files and/or directories that you wish to auto-document. 
+
+You may enter file names like `myfile.cpp` or directories like `src/myproject`. Separate the files or directories with spaces.
+
+Note that relative paths are relative to the root of your repository.
+
+If this tag is empty, all the source files in your repository are scanned.
 
 The default value is: ""
 
 ### EXCLUDE ###
 
-Exclude directories and files.  
+The EXCLUDE tag can be used to specify files and/or directories that should be excluded from the INPUT source files. This way you can easily exclude a subdirectory from a directory tree whose root is specified with the INPUT tag. 
+
+Note that relative paths are relative to the root of your repository.
 
 The default value is: ""
 
 ### EXCLUDE_PATTERNS ###
 
-Exclude directories and files using a pattern.  
+If the value of the INPUT tag contains directories, you can use the EXCLUDE_PATTERNS tag to specify one or more wildcard patterns to exclude certain files from those directories. 
+
+Note that the wildcards are matched against the file with absolute path, so to exclude all test directories for example use the pattern `*/test/*`
 
 The default value is: ""
 
 ### EXAMPLE_PATH ###
 
-The example path  
+The EXAMPLE_PATH tag can be used to specify one or more files or directories that contain example code fragments that are included (see the <a href="http://www.doxygen.nl/manual/commands.html#cmdinclude">\include</a> command).
 
 The default value is: ""
 
 Exclude Include API by name
 ---------------------------
 
-### includeApi ###
-
-A list of API names to include in the auto-documentation. if this list is not empty, any other apis will not be documented.
-
-The default value is: []
+!!! note
+    The following keys allows control over which pages to display or omit from the public api.
+    
+    For more examples, see [here](https://doxiz.com/doxiz/master/customizing-the-public-api/#exclude-or-include-specific-api-pages)
 
 ### excludeApi ###
 
 A list of API names to exclude from the auto-documentation.  
 
 The default value is: []
+
+
+### includeApi ###
+
+The includeApi tag is used to limit the auto-docmentation to a list of API names in includeApi.
+
+If the list is not empty, only the specified apis and their descendents will be documented. Any other API will be omitted from being documented.
+
+For example, if your source code contains hundreds of classes, but only several of them should be displayed in your public api, you can limit the documentation by writing:
+
+    includeApi:  
+    -  api/my_namespace/my_class"  
+    -  api/my_namespace/my_other_class
+
+And only `my_namespace::my_class` and `my_namespace::my_other_class` will be documented.
+
+If this key is an empty list all apis will be documented.
+
+The default value is: []
+
 
 
 Exclude Private Protected Static
@@ -125,7 +159,7 @@ For Python this value is not relevant and has no effect.
     
 !!! tip
     Some projects prefer `extractNonDocComments=false` which gives more control over which comments are extracted and which are not.  
-    The down side is changing `//`to `///` for each and every comment, which is tedious for some maintainers.  
+    The downside is changing `//`to `///` for each and every comment, which is tedious for some maintainers.  
     
     We suggest extracting all comments (`extractNonDocComments=true`). It's not too greedy because only comments which are adjacent to objects will be extracted.  
     Whenever a comment was wrongfully extracted, turning `//` to `////` or more slashes will force it not to be extracted.
@@ -151,32 +185,62 @@ PreProcessing
 
 !!! note
     This section is relevant only for languages c, c++, c#.
+    
+    The following parameters deal with the c preprocessor that works with doxygen. You can see additional details [here](http://www.doxygen.nl/manual/preprocessing.html).
 
-The following parameters deal with the c preprocessor that works with doxygen. You can see additional details [here](https://www.star.bnl.gov/public/comp/sofi/doxygen/config.html#config_prepro).
 
 ### ENABLE_PREPROCESSING ###
 
-If the ENABLE_PREPROCESSING tag is set to YES (the default) doxygen will evaluate all C-preprocessor directives found in the sources and include files.  
-
-The default value is: "YES"
-
-### MACRO_EXPANSION ###
-
-If the MACRO_EXPANSION tag is set to YES (the default) doxygen will expand all macro names in the source code. If set to NO only conditional compilation will be performed. Macro expansion can be done in a controlled way by setting EXPAND_ONLY_PREDEF to YES.  
-
-The default value is: "YES"
-
-### EXPAND_ONLY_PREDEF ###
-
-If the EXPAND_ONLY_PREDEF and MACRO_EXPANSION tags are both set to YES then the macro expansion is limited to the macros specified with the PREDEFINED and EXPAND_AS_DEFINED tags.  
+If the ENABLE_PREPROCESSING tag is set to "YES", doxygen will evaluate all C-preprocessor directives found in the sources and include files.  
 
 The default value is: "NO"
 
+Note: the values true/false can also be used instead of "YES"/"NO".
+
+### MACRO_EXPANSION ###
+
+If the MACRO_EXPANSION tag is set to "YES", doxygen will expand all macro names in the source code. If set to NO only conditional compilation will be performed. Macro expansion can be done in a controlled way by setting EXPAND_ONLY_PREDEF to YES.  
+
+The default value is: "NO"
+
+Note: the values true/false can also be used instead of "YES"/"NO".
+
+### SKIP_FUNCTION_MACROS ###
+
+If the SKIP_FUNCTION_MACROS tag is set to "YES", doxygen's preprocessor will remove all function-like macros that are alone on a line, have an all uppercase name, and do not end with a semicolon. Such function macros are typically used for boiler-plate code, and will confuse the parser if not removed.  
+
+The default value is: "NO"
+
+Note: the values true/false can also be used instead of "YES"/"NO". 
+
+### EXPAND_ONLY_PREDEF ###
+
+If the EXPAND_ONLY_PREDEF and MACRO_EXPANSION tags are both set to "YES" then the macro expansion is limited to the macros specified with the PREDEFINED and EXPAND_AS_DEFINED tags.  
+
+The default value is: "NO"
+
+Note: the values true/false can also be used instead of "YES"/"NO".
+
+### PREDEFINED ###
+ 
+The PREDEFINED tag can be used to specify one or more macro names that are defined before the preprocessor is started (similar to the -D option of gcc). The argument of the tag is a list of macros of the form: name or name=definition (no spaces). If the definition and the "=" are omitted, "=1" is assumed.  
+
+The default value is: ""
+
+### EXPAND_AS_DEFINED ###
+
+If the MACRO_EXPANSION and EXPAND_ONLY_PREDEF tags are set to "YES" then this tag can be used to specify a list of macro names that should be expanded. The macro definition that is found in the sources will be used. Use the PREDEFINED tag if you want to use a different macro definition.  
+
+The default value is: ""   
+
+
 ### SEARCH_INCLUDES ###
 
-If the SEARCH_INCLUDES tag is set to YES (the default) the includes files in the INCLUDE_PATH (see below) will be searched if a #include is found.  
+If the SEARCH_INCLUDES tag is set to "YES" the includes files in the INCLUDE_PATH (see below) will be searched if a #include is found.  
 
 The default value is: "YES"
+
+Note: the values true/false can also be used instead of "YES"/"NO".
 
 ### INCLUDE_PATH ###
 
@@ -188,25 +252,7 @@ The default value is: ""
 
 You can use the INCLUDE_FILE_PATTERNS tag to specify one or more wildcard patterns (like *.h and *.hpp ) to filter out the header-files in the directories.  
 
-The default value is: ""
-
-### PREDEFINED ###
- 
-The PREDEFINED tag can be used to specify one or more macro names that are defined before the preprocessor is started (similar to the -D option of gcc). The argument of the tag is a list of macros of the form: name or name=definition (no spaces). If the definition and the "=" are omitted, "=1" is assumed.  
-
-The default value is: ""
-
-### EXPAND_AS_DEFINED ###
-
-If the MACRO_EXPANSION and EXPAND_ONLY_PREDEF tags are set to YES then this tag can be used to specify a list of macro names that should be expanded. The macro definition that is found in the sources will be used. Use the PREDEFINED tag if you want to use a different macro definition.  
-
-The default value is: ""    
-
-### SKIP_FUNCTION_MACROS ###
-
-If the SKIP_FUNCTION_MACROS tag is set to YES (the default) then doxygen's preprocessor will remove all function-like macros that are alone on a line, have an all uppercase name, and do not end with a semicolon. Such function macros are typically used for boiler-plate code, and will confuse the parser if not removed.  
-
-The default value is: "YES"  
+The default value is: "" 
     
 
 Default configurations per language
@@ -238,15 +284,15 @@ autodocSettings:
     # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
     EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
-    ENABLE_PREPROCESSING: 'YES'
-    MACRO_EXPANSION: 'YES'
+    ENABLE_PREPROCESSING: 'NO'
+    MACRO_EXPANSION: 'NO'
     EXPAND_ONLY_PREDEF: 'NO'
     SEARCH_INCLUDES: 'YES'
     INCLUDE_PATH: ''
     INCLUDE_FILE_PATTERNS: ''
     PREDEFINED: ''
     EXPAND_AS_DEFINED: ''
-    SKIP_FUNCTION_MACROS: 'YES'
+    SKIP_FUNCTION_MACROS: 'NO'
 ```
 
 ### Default Configurations for C
@@ -273,15 +319,15 @@ autodocSettings:
     # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
     EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
-    ENABLE_PREPROCESSING: 'YES'
-    MACRO_EXPANSION: 'YES'
+    ENABLE_PREPROCESSING: 'NO'
+    MACRO_EXPANSION: 'NO'
     EXPAND_ONLY_PREDEF: 'NO'
     SEARCH_INCLUDES: 'YES'
     INCLUDE_PATH: ''
     INCLUDE_FILE_PATTERNS: ''
     PREDEFINED: ''
     EXPAND_AS_DEFINED: ''
-    SKIP_FUNCTION_MACROS: 'YES'
+    SKIP_FUNCTION_MACROS: 'NO'
 ```
 
 ### Default Configurations for C# ###
@@ -308,15 +354,15 @@ autodocSettings:
     # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.cs"
     EXTENSION_MAPPING: "cs=csharp"
-    ENABLE_PREPROCESSING: 'YES'
-    MACRO_EXPANSION: 'YES'
+    ENABLE_PREPROCESSING: 'NO'
+    MACRO_EXPANSION: 'NO'
     EXPAND_ONLY_PREDEF: 'NO'
     SEARCH_INCLUDES: 'YES'
     INCLUDE_PATH: ''
     INCLUDE_FILE_PATTERNS: ''
     PREDEFINED: ''
     EXPAND_AS_DEFINED: ''
-    SKIP_FUNCTION_MACROS: 'YES'
+    SKIP_FUNCTION_MACROS: 'NO'
 ```
 
 ### Default Configurations for Java

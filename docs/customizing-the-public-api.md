@@ -62,7 +62,7 @@ A public API page is defined by it's **page_path** - a concatenation of **all** 
 
 For example: `api/my_class/my_func`.
 
-You can exclude or include multiple api pages by seperating between them with a comma. 
+You can exclude or include multiple api pages by adding them as a yaml list. 
 
 **Examples:**
 
@@ -96,7 +96,9 @@ You can exclude or include multiple api pages by seperating between them with a 
             - "api/my_other_namespace"
             ...
 
-    will create documentation only of API pages that are inside the scope `my_other_namespace`.
+    will create documentation **only** of API pages that are inside the scope `my_other_namespace`. Any other API page will be omitted from the public API.
+    
+    The use case is if your project has hundreds of API classes/functions, but you wish to document only a small subset that is important for the end users.
 
 3.  If both includeApi and excludeApi conditions exist, both will be met.
 
@@ -107,11 +109,11 @@ You can exclude or include multiple api pages by seperating between them with a 
             includeApi":
             - "api/my_other_namespace"
             excludeApi":
-            - "api/my_namespace/my_class/my_func"
+            - "api/my_other_namespace/my_class/my_func"
             - "api/my_namespace/my_other_class"
             ...
     
-    only `my_other_namespace` will be documented, `my_class/my_func` inside it will be excluded, and the exclusion `my_namespace/my_other_class` will be ignored since it's not under `my_other_namespace` in the first place. 
+    only `my_other_namespace` will be documented, `my_other_namespace/my_class/my_func` inside it will be excluded, and the exclusion `my_namespace/my_other_class` will be ignored since it's not under `my_other_namespace` which is the only included api. 
     
 
 Additional Customization
