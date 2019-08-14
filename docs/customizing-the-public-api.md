@@ -60,7 +60,7 @@ You can exclude or include specific public API pages (functions, classes, namesp
 
 A public API page is defined by it's **page_path** - a concatenation of **all** the scopes (functions, classes, namespaces, etc...) that led to the page. 
 
-For example: `api/my_class/my_func`.
+For example: `my_class/my_func`.
 
 You can exclude or include multiple api pages by adding them as a yaml list. 
 
@@ -70,11 +70,10 @@ You can exclude or include multiple api pages by adding them as a yaml list.
 
         autodocSettings:
           Public API:
-            baseUrl: api
             ...
             excludeApi":
-            - "api/my_namespace/my_class/my_func"
-            - "api/my_namespace/my_other_class"
+            - "my_namespace/my_class/my_func"
+            - "my_namespace/my_other_class"
             ...
 
     will exclude `my_func` and `my_other_class` (and all it's methods, see note.).
@@ -90,10 +89,9 @@ You can exclude or include multiple api pages by adding them as a yaml list.
 
         autodocSettings:
           Public API:
-            baseUrl: api
             ...
             includeApi":
-            - "api/my_other_namespace"
+            - "my_other_namespace"
             ...
 
     will create documentation **only** of API pages that are inside the scope `my_other_namespace`. Any other API page will be omitted from the public API.
@@ -104,13 +102,12 @@ You can exclude or include multiple api pages by adding them as a yaml list.
 
         autodocSettings:
           Public API:
-            baseUrl: api
             ...
             includeApi":
-            - "api/my_other_namespace"
+            - "my_other_namespace"
             excludeApi":
-            - "api/my_other_namespace/my_class/my_func"
-            - "api/my_namespace/my_other_class"
+            - "my_other_namespace/my_class/my_func"
+            - "my_namespace/my_other_class"
             ...
     
     only `my_other_namespace` will be documented, `my_other_namespace/my_class/my_func` inside it will be excluded, and the exclusion `my_namespace/my_other_class` will be ignored since it's not under `my_other_namespace` which is the only included api. 

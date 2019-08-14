@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.11 (14th Aug 2019)
+
+- Bug fixes.
+
 ## 3.1.10 (13th Aug 2019)
 
 - Improved member documentation if `extractNonDocComments=true`.

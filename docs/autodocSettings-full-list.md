@@ -70,24 +70,39 @@ Exclude Include API by name
 
 ### excludeApi ###
 
-A list of API names to exclude from the auto-documentation.  
+The excludeApi tag is used to exclude a list of APIs from being auto-docmented.
+
+If the list is not empty, the specified apis and their descendents will not be documented.
+
+For example, by writing:
+
+    excludeApi:  
+    -  my_namespace/my_class/my_func"  
+    -  my_namespace/my_other_class
+
+You exclude `my_namespace/my_class/my_func`, `my_namespace/my_other_class` and all their descendants from being documented.
+
+This essentially is a way to treat these objects as private objects without changing the source code.
+
+If this key is empty, no API will be excluded.
 
 The default value is: []
 
-
 ### includeApi ###
 
-The includeApi tag is used to limit the auto-docmentation to a list of API names in includeApi.
+The includeApi tag is used to limit the auto-docmentation to a specified list of API names.
 
 If the list is not empty, only the specified apis and their descendents will be documented. Any other API will be omitted from being documented.
 
-For example, if your source code contains hundreds of classes, but only several of them should be displayed in your public api, you can limit the documentation by writing:
+For example, by writing:
 
     includeApi:  
-    -  api/my_namespace/my_class"  
-    -  api/my_namespace/my_other_class
+    -  my_namespace/my_class"  
+    -  my_namespace/my_other_class
 
-And only `my_namespace::my_class` and `my_namespace::my_other_class` will be documented.
+Only `my_namespace::my_class` and `my_namespace::my_other_class` will be documented.
+
+This tag is useful if your source code contains hundreds of classes, but only several of them should be displayed in your public api.
 
 If this key is an empty list all apis will be documented.
 
