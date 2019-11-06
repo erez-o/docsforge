@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.1.13 (5th Nov 2019)
+
+- Added periodic creation of docs.
+
+## 3.1.12 (27th Sep 2019)
+
+- Added discussion spam filter.
+
+- Added printing of git commit hash to log file.
+
 ## 3.1.11 (14th Aug 2019)
 
 - Bug fixes.
