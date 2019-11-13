@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.14 (13th Nov 2019)
+
+- Improved logging
+
 ## 3.1.13 (5th Nov 2019)
 
 - Added periodic creation of docs.
