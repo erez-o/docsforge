@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.1.16 (26th Nov 2019)
+
+- Improved readability of yaml configuration file.
+
+## 3.1.15 (24th Nov 2019)
+
+- Updated highlight.js to fix yaml support
+
+- Added support for emojis in markdown
+
 ## 3.1.14 (13th Nov 2019)
 
 - Improved logging

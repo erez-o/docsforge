@@ -10,6 +10,7 @@ additionalSettings:
   autolink: true
   markdown_math: false
   markdown_tasklist: false
+  markdown_emoji: false
   wiki_repo_path: false
 ```
 
@@ -38,6 +39,17 @@ default: false
 markdown_tasklist
 -------------
 Enable github markdown style task list
+
+default: false
+
+
+markdown_emoji
+-------------
+Enable emojis in markdown. See <a href="https://www.webfx.com/tools/emoji-cheat-sheet/" rel="nofollow">cheat sheet codes</a>.
+
+There's a risk of emojis being recognized too often, for example, the code `std::thread::hardware_concurrency` will turn to `std:🧵:hardware_concurrency`.
+
+As a precaution, even if enabled, emojis will only be searched on markdown files, and not automatically generated api files.
 
 default: false
 

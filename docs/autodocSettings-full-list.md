@@ -77,7 +77,7 @@ If the list is not empty, the specified apis and their descendents will not be d
 For example, by writing:
 
     excludeApi:  
-    -  my_namespace/my_class/my_func"  
+    -  my_namespace/my_class/my_func  
     -  my_namespace/my_other_class
 
 You exclude `my_namespace/my_class/my_func`, `my_namespace/my_other_class` and all their descendants from being documented.
@@ -97,7 +97,7 @@ If the list is not empty, only the specified apis and their descendents will be 
 For example, by writing:
 
     includeApi:  
-    -  my_namespace/my_class"  
+    -  my_namespace/my_class  
     -  my_namespace/my_other_class
 
 Only `my_namespace::my_class` and `my_namespace::my_other_class` will be documented.
