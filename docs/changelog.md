@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.17 (1st Dec 2019)
+
+- Removed meta description tag.
+
 ## 3.1.16 (26th Nov 2019)
 
 - Improved readability of yaml configuration file.
