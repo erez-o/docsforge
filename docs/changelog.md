@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.19 (8th Dec 2019)
+
+- Added Google Analytics
+
 ## 3.1.18 (6th Dec 2019)
 
 - Improved meta description tag for API pages. Non API pages are created without a meta description tag.
