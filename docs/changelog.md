@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.20 (9th Dec 2019)
+
+- Various fixes
+
 ## 3.1.19 (8th Dec 2019)
 
 - Added Google Analytics
