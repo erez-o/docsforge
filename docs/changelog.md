@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.2.0 (11th Dec 2019)
+
+- Added automatic mapping of relative links and images found in markdown pages. 
+
+    - Solves broken links and the need for manual changes.
+
+    - Mapping is done only for markdown pages that appear in the sidebar section of the yaml configuration file. 
+    
+    - Also relevant for github wiki pages.
+
 ## 3.1.20 (9th Dec 2019)
 
 - Various fixes
