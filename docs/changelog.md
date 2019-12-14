@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.2.1 (14th Dec 2019)
+
+- Added on option for project maintainers to download docs. Helpful for tracking changes offline (changes caused by changing the yaml file or changes in your project repositroy).
+
+- Added a report on API documentation coverage - methods, classes, etc don't have description. Report can be seen inside project build log.
+
+- Various minor bug fixes.
+
 ## 3.2.0 (11th Dec 2019)
 
 - Added automatic mapping of relative links and images found in markdown pages. 
