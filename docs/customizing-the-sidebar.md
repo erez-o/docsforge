@@ -40,15 +40,17 @@ To add pages to sections, you need to supply a simple `key: value`. `key` is the
 
 There are several page types that can be created:
 
-### Documentation page from your repo
+### Doc page from your repo
 
-To add this type of page to your sidebar, you need to supply a `key` that defines the page name, and a `value` that defines that file path to where your file is in your repository.
+To add a documentation page to your sidebar, you need to supply a `key` that defines the page name, and a `value` that defines that file path to where your file is in your repository.
 
 File path can be a documentation file (markdown, reStructuredTxt, html, asciidoc, text), or a source code file, like the above `schema.json`.
 
 For example:
 
-    "Customizing The Sidebar": "docs/customizing-the-sidebar.md"
+```yaml
+"Customizing The Sidebar": "docs/customizing-the-sidebar.md"
+```
 
 
 ### API page
@@ -58,8 +60,10 @@ The auto-documentation creates API pages from your source code, and displays **a
 However, not all API pages are as important as others. Therefore, you can highlight some of them, and insert them to additional sections as well.
 
 For example: (see [getting started](https://doxiz.com/getting_started/#configuration-file))
- 
-    "my_important_function1":"api/my_important_class/my_important_function1"
+
+```yaml
+"my_important_function1":"api/my_important_class/my_important_function1"
+```
 
 (*) This assumes you have function `my_important_class` inside class `my_important_function1`, and `baseUrl: api` in your `autodocSettings`.
 
@@ -72,19 +76,25 @@ To add this type of page to your sidebar, you need to supply a `key` that define
 
 For example: 
 
-    "Contact us": "http://example.com/contact-us/"
+```yaml
+"Contact us": "http://example.com/contact-us/"
+```
         
-### Documentation page from a different repo
+### Doc page from a different repo
 
-To add this type of page to your sidebar, you need to supply a `key` that defines the page name, and a `value` that defines that file path to where the **raw** file is.
+To add a documentation page to your sidebar, you need to supply a `key` that defines the page name, and a `value` that defines that file path to where the **raw** file is.
 
 For example, from a regular repository:
     
-    "My page": "https://raw.githubusercontent.com/<username>/<reponame>/master/<filename>.md"
+```yaml
+"My page": "https://raw.githubusercontent.com/<username>/<reponame>/master/<filename>.md"
+```
     
 For example, from a wiki repository:
     
-    "My page": "https://raw.githubusercontent.com/wiki/<username>/<reponame>/<filename>.md"
+```yaml
+"My page": "https://raw.githubusercontent.com/wiki/<username>/<reponame>/<filename>.md"
+```
         
         
 Multi Level Sections
