@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.2.2 (TBD)
+
+- Improved `autolink` of API pages. Made algorithm greedier in `<code>` and `<pre>` tags.
+
+
 ## 3.2.1 (14th Dec 2019)
 
 - Added on option for project maintainers to download docs. Helpful for tracking changes offline (changes caused by changing the yaml file or changes in your project repositroy).

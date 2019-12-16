@@ -20,9 +20,21 @@ autolink
 --------
 Scans documentation pages and tries to automatically detect api pages and creates links to them. 
 
-For example, if the method `my_class::my_func` is in your public api, anytime the text `my_class::my_func` is encountered in a documentation page, the text will turn to a link to the `my_class::my_func` page.
+For example, if the method `my_class::my_func` is in your public api, anytime the text `my_class::my_func` is encountered in a documentation page, the text will turn to a link to the `my_class::my_func` API page.
 
-The algorithm is not too greedy and favors misdetections to creating false alarms.
+Autolinks are created for the following regular expressions:
+
+- `[a-zA-Z0-9_]+((\.|\:\:)[a-zA-Z0-9_]+)+` - Any reference to 2 or more API pages, for example, `my_namespace::my_class::my_func`, `my_class::my_func`, `my_class.my_func`.
+
+- `[a-zA-Z0-9_]+(\()` - Any reference to an API page that ends with `(`, for example a method `load_function(`.
+
+- `[a-zA-Z0-9_]+(\&lt;)` - For C/C++ - any reference to an API page that ends with `<`, for example a method `load_function<`.
+
+Inside `<pre>` or `<code>` tags, the algorithm is greedier:
+
+- `[a-zA-Z0-9_]+` - Any reference to an API pages, for example `my_class`, `my_function`, etc.
+
+To avoid misdetections, any reference that can point to two different API pages is excluded. For example, if two different classes have a method `get`, we won't create a link if we find `get`, `get(`, or `get<`.
 
 default: true
 

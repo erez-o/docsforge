@@ -270,6 +270,17 @@ You can use the INCLUDE_FILE_PATTERNS tag to specify one or more wildcard patter
 The default value is: "" 
     
 
+Configuration Options
+---------------------
+
+### TYPEDEF_HIDES_STRUCT ###
+
+When TYPEDEF_HIDES_STRUCT tag is enabled, a typedef of a struct, union, or enum is documented as struct, union, or enum with the name of the typedef. So typedef struct TypeS {} TypeT, will appear in the documentation as a struct with name TypeT. When disabled the typedef will appear as a member of a file, namespace, or class. And the struct will be named TypeS. This can typically be useful for C code in case the coding convention dictates that all compound types are typedef'ed and only the typedef is referenced, never the tag name.
+
+The default for C and C++ is: "YES"  
+The default for other languages: "NO"
+
+
 Default configurations per language
 -----------------------------------
 
@@ -308,6 +319,7 @@ autodocSettings:
     PREDEFINED: ''
     EXPAND_AS_DEFINED: ''
     SKIP_FUNCTION_MACROS: 'NO'
+    TYPEDEF_HIDES_STRUCT: 'YES'
 ```
 
 ### Default Configurations for C
@@ -343,6 +355,7 @@ autodocSettings:
     PREDEFINED: ''
     EXPAND_AS_DEFINED: ''
     SKIP_FUNCTION_MACROS: 'NO'
+    TYPEDEF_HIDES_STRUCT: 'YES'
 ```
 
 ### Default Configurations for C# ###

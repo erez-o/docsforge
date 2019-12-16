@@ -74,6 +74,20 @@ There are several page types that can be created:
     
         "Contact us": "http://example.com/contact-us/"
         
+4. **Documentation page from a different repo**.
+
+    To add this type of page to your sidebar, you need to supply a `key` that defines the page name, and a `value` that defines that file path to where the **raw** file is.
+    
+    For example: 
+    
+        From a regular repository:
+        
+        "My page": "https://raw.githubusercontent.com/<username>/<reponame>/master/<filename>.md"
+        
+        Or from a wiki repository:
+        
+        "My page": "https://raw.githubusercontent.com/wiki/<username>/<reponame>/<filename>.md"
+        
         
 Multi Level Sections
 --------------------
