@@ -1,8 +1,10 @@
 # Changelog
 
-## 3.2.2 (TBD)
+## 3.2.2 (16th Dec 2019)
 
 - Improved `autolink` of API pages. Made algorithm greedier in `<code>` and `<pre>` tags.
+
+- Added `TYPEDEF_HIDES_STRUCT`, which favors using the typedef name instead of the struct name. Activated by default on C/C++.
 
 
 ## 3.2.1 (14th Dec 2019)
