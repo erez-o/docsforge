@@ -49,7 +49,7 @@ File path can be a documentation file (markdown, reStructuredTxt, html, asciidoc
 For example:
 
 ```yaml
-"Customizing The Sidebar": "docs/customizing-the-sidebar.md"
+Customizing The Sidebar: docs/customizing-the-sidebar.md
 ```
 
 
@@ -62,7 +62,7 @@ However, not all API pages are as important as others. Therefore, you can highli
 For example: (see [getting started](https://doxiz.com/getting_started/#configuration-file))
 
 ```yaml
-"my_important_function1":"api/my_important_class/my_important_function1"
+my_important_function1: api/my_important_class/my_important_function1
 ```
 
 (*) This assumes you have function `my_important_class` inside class `my_important_function1`, and `baseUrl: api` in your `autodocSettings`.
@@ -77,7 +77,7 @@ To add this type of page to your sidebar, you need to supply a `key` that define
 For example: 
 
 ```yaml
-"Contact us": "http://example.com/contact-us/"
+Contact us: http://example.com/contact-us/
 ```
         
 ### Doc page from a different repo
@@ -87,13 +87,13 @@ To add a documentation page to your sidebar, you need to supply a `key` that def
 For example, from a regular repository:
     
 ```yaml
-"My page": "https://raw.githubusercontent.com/<username>/<reponame>/master/<filename>.md"
+My page: https://raw.githubusercontent.com/<username>/<reponame>/master/<filename>.md
 ```
     
 For example, from a wiki repository:
     
 ```yaml
-"My page": "https://raw.githubusercontent.com/wiki/<username>/<reponame>/<filename>.md"
+My page: https://raw.githubusercontent.com/wiki/<username>/<reponame>/<filename>.md
 ```
         
         
