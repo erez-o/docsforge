@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.3 (19th Dec 2019)
+
+- Various css and javascript changes.
+
 ## 3.2.2 (16th Dec 2019)
 
 - Improved `autolink` of API pages. Made algorithm greedier in `<code>` and `<pre>` tags.
