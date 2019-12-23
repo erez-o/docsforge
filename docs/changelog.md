@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.4 (23th Dec 2019)
+
+- Improved 404 pages of project pages.
+
 ## 3.2.3 (19th Dec 2019)
 
 - Various css and javascript changes.
