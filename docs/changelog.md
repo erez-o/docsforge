@@ -1,5 +1,29 @@
 # Changelog
 
+## 3.3.1 (5th Jan 2020)
+
+- Improved 404 pages (added relative search results)
+
+- Added optional per project table of 301 redirects
+
+- Improved build summary sent in emails. 
+
+- Improved emails to admins.
+
+- Improved loggings.
+
+- Bug fix PREDEFINED multiline.
+
+## 3.3.0 (1st Jan 2020)
+
+- Added display of Defines, Typedefs, Enums of files in the public api section. Added search and autolinking of these objects.
+
+- Improved autolinking.
+
+## 3.2.5 (28th Dec 2019)
+
+- Improved display of members (variables, enums, typedefs, events, properties) section. Only public members are displayed. Non public are not part of the common public API and should not be generally used by native users.
+
 ## 3.2.4 (23th Dec 2019)
 
 - Improved 404 pages of project pages.
