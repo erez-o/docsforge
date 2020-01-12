@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.3.2 (12th Jan 2020)
+
+- Added "Mentioned in" section to api pages. For every api page we look at all the doc pages it was mentioned in, and list them.
+
+- Improved autolinking of api pages to reduce false detection.
+
+- Added support for reading `man` pages (using pandoc)
+
+- `extractNonDocComments` default changed to `false`
+
+- Various fixes
+
 ## 3.3.1 (5th Jan 2020)
 
 - Improved 404 pages (added relative search results)

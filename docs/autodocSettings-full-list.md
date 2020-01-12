@@ -153,7 +153,7 @@ Extracts all non doc code comments.
 If False, only doc comments that start with `///` or `/**` will be extracted.
 If True, non doc comments that start with `//` or `/*` will also be extracted.
 
-The default value for C, C++, C#, Java is: true  
+The default value for C, C++, C#, Java is: false  
 For Python this value is not relevant and has no effect.
 
 !!! note
@@ -174,10 +174,10 @@ For Python this value is not relevant and has no effect.
     
 !!! tip
     Some projects prefer `extractNonDocComments=false` which gives more control over which comments are extracted and which are not.  
-    The downside is changing `//`to `///` for each and every comment, which is tedious for some maintainers.  
+    The downside is changing `//`to `///` for every comment you wish to extract, which can be tedious for some maintainers.  
     
-    We suggest extracting all comments (`extractNonDocComments=true`). It's not too greedy because only comments which are adjacent to objects will be extracted.  
-    Whenever a comment was wrongfully extracted, turning `//` to `////` or more slashes will force it not to be extracted.
+    On the other hand, extracting all comments (`extractNonDocComments=true`) can extract comments that are aimed to be for internal use only.  
+    If you prefer `extractNonDocComments=true`, and wish to stop a certain comment from being extracted, turning `//` to `////` will stop it from being extracted.
 
 Source File Types
 -----------------
