@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.4 (19th Jan 2020)
+
+- Minor bug fix
+
 ## 3.3.3 (19th Jan 2020)
 
 - Enums/Defines/Typedefs/Variables are only read if their scopes are from files/namespaces/packages/modules. They are now searchable.
