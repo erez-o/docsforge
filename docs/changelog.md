@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.3.3 (19th Jan 2020)
+
+- Enums/Defines/Typedefs/Variables are only read if their scopes are from files/namespaces/packages/modules. They are now searchable.
+
+- Improved autolinks and "mentioned in".
+
+- Improved user experience of sidebar.
+
+- Various fixes
+
 ## 3.3.2 (12th Jan 2020)
 
 - Added "Mentioned in" section to api pages. For every api page we look at all the doc pages it was mentioned in, and list them.
