@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.3.5 (27th Jan 2020)
+
+- Improved sorting of funtcions/classes/namespaces/etc. 
+
+  - First, sort by type : Namespaces/Packages are displayed first, Modules second, Classes/Structures/Unions/Interfaces third, Functions/Properties fourth (constructors/destructors first amongst them). 
+
+  - Second, sort alphabetically, currently not user customizable not to add too many parameters for the users.
+  
+- Improved autolinks and markdown.
+
+- Improved build speed.
+
+- Fixed rare cases of wrongfully created pages for private apis. 
+
 ## 3.3.4 (19th Jan 2020)
 
 - Minor bug fix
