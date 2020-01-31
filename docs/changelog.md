@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.3.6 (31st Jan 2020)
+
+- Updated 3rd party packages.
+
+- Improved enum tables css.
+
+- Improved celery maintenance flow.
+
+- Improved "Mentioned in".
+
+- Improved sidebar javascript.
+
 ## 3.3.5 (27th Jan 2020)
 
 - Improved sorting of funtcions/classes/namespaces/etc. 
