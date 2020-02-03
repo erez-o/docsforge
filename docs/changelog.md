@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.7 (3rd Feb 2020)
+
+- Various improvements to autolinks.
+
 ## 3.3.6 (31st Jan 2020)
 
 - Updated 3rd party packages.
