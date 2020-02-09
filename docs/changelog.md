@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.3.8 (9th Feb 2020)
+
+- Various CSS & Javascript improvements
+
+- Added template and virtual keywords when occurs.
+
+- Support for groupings.
+
+- Bugfix - autolinks wrongfully detected folders. 
+
 ## 3.3.7 (3rd Feb 2020)
 
 - Various improvements to autolinks.
