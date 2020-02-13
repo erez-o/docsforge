@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.3.9 (13th Feb 2020)
+
+- Improved autolinks.
+
+- Synopsis section is created for classes even if not template.  
+
 ## 3.3.8 (9th Feb 2020)
 
 - Various CSS & Javascript improvements
