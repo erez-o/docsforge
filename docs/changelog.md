@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.3.10 (20th Feb 2020)
+
+- If multiple api sections, autolinking on each api section uses combined api links from all api sections. Before, autolinking for each api section was done only with api of said section. 
+
+- Improved yaml editing and validations.
+
+- Improved source section.
+
+- Various improvements and fixes. 
+
 ## 3.3.9 (13th Feb 2020)
 
 - Improved autolinks.
