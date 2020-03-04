@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.3.11 (4th Mar 2020)
+
+- Added support for `.mediawiki` files using Pandoc.
+
+- Improved title tag, 302 redirects, spam filter, various bug fixes.
+
 ## 3.3.10 (20th Feb 2020)
 
 - If multiple api sections, autolinking on each api section uses combined api links from all api sections. Before, autolinking for each api section was done only with api of said section. 
