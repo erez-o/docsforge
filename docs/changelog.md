@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.3.12 (19th Mar 2020)
+
+- Multiple fields in yaml configuration file can now be a list of strings. For example, `INPUT`, `PREDEFINED`, etc.
+
+- Trying to automatically search and read `doxyfile.in` when adding a new project.
+
+- Various bug fixes.
+
 ## 3.3.11 (4th Mar 2020)
 
 - Added support for `.mediawiki` files using Pandoc.
