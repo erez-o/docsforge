@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.3.13 (8th Apr 2020)
+
+- Added doxygen warnings to build log.
+
+- Extended sidebar headings (h1-h6).
+
+- Various bug fixes.
+
 ## 3.3.12 (19th Mar 2020)
 
 - Multiple fields in yaml configuration file can now be a list of strings. For example, `INPUT`, `PREDEFINED`, etc.
