@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.4.0 (1st May 2020)
+
+- Seperate subdomian per project. Allows to setup any custom domain like `example.com` by pointing your CNAME. 
+
+- Various bug fixes.
+
 ## 3.3.13 (8th Apr 2020)
 
 - Added doxygen warnings to build log.

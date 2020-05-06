@@ -65,7 +65,7 @@ The configuration file has 2 main parts:
 !!! Tip
     The full public API can be very large and daunting. Focus users to look into the most used API as was done in `Important API` section. Any auto-generated API page can be added to any section.
 
-To learn more, you can learn how to [customize the sidebar](https://doxiz.com/doxiz/master/customizing-the-sidebar/), [customize the public api](https://doxiz.com/doxiz/master/customizing-the-public-api), or view the full list of [autodoc settings](https://doxiz.com/doxiz/master/autodoc-settings)
+To learn more, you can learn how to [customize the sidebar](https://help.doxiz.com/master/customizing-the-sidebar/), [customize the public api](https://help.doxiz.com/master/customizing-the-public-api), or view the full list of [autodoc settings](https://help.doxiz.com/master/autodoc-settings)
 
 Improving your documentation
 ----------------------------

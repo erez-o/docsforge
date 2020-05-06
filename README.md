@@ -97,7 +97,7 @@ autodocSettings:
 
 *   `Important API`   - The full public API can be very large and daunting for new users. Focus users to look into the most used API as was done in `Important API` section. Any auto-generated API page can be added to any section.
 
-To learn more, you can learn how to [customize the sidebar](http://doxiz.com/doxiz/master/customizing-the-public-api), [customize the public api](http://doxiz.com/doxiz/master/customizing-the-public-api), or view the full list of [autodoc settings](http://doxiz.com/doxiz/master/autodoc-settings)
+To learn more, you can learn how to [customize the sidebar](http://help.doxiz.com/master/customizing-the-public-api), [customize the public api](http://help.doxiz.com/master/customizing-the-public-api), or view the full list of [autodoc settings](http://help.doxiz.com/master/autodoc-settings)
 
 
 Bugs and feature requests
