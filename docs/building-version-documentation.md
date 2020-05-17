@@ -9,8 +9,8 @@ For example, the build log for this project is:
 
 ```
 [0s] ====== BEGIN ====== BUILDING VERSION DOCS ======
-[0s] version_name: master, repo: https://github.com/erez-o/doxiz, initiated by: erez
-[0s] Cloning git : git clone --depth 1 --branch master https://github.com/erez-o/doxiz .
+[0s] version_name: master, repo: https://github.com/erez-o/docsforge, initiated by: erez
+[0s] Cloning git : git clone --depth 1 --branch master https://github.com/erez-o/docsforge .
 [1s] Finished cloning, Response: 0 - OK
 [1s] Git clone finished, stage 1/6
 [1s] Saving project YAML configuration file
@@ -35,4 +35,4 @@ Warnings and exceptions are highlighted, to help identify problems that occurred
 
 Warnings are intended for the project maintainer, as it will help guide you how to fix things.
 
-If your build failed, or if your log reports any exception, please [file an issue on github](https://github.com/erez-o/doxiz/issues) and link to the problematic build log.
+If your build failed, or if your log reports any exception, please [file an issue on github](https://github.com/erez-o/docsforge/issues) and link to the problematic build log.

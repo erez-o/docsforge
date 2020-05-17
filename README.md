@@ -1,7 +1,7 @@
-Doxiz
+DocsForge
 =========
 
-[Doxiz](http://doxiz.com/) is a website that hosts and creates documentation for your code projects.
+[DocsForge](http://docsforge.com/) is a website that hosts and creates documentation for your code projects.
 
 It is completely **FREE** of charge for open source projects.
  
@@ -12,29 +12,29 @@ It features a customizable manual and automatic code documentation. It also feat
 Screenshots:
 ------------
 
-For example, the following screenshots are from the [TinyXml2](http://doxiz.com/tinyxml2/) project (version 7.0.1):
+For example, the following screenshots are from the [TinyXml2](http://docsforge.com/tinyxml2/) project (version 7.0.1):
 
 ### Getting started page:
 
-![Getting started](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-getting_started.png)
+![Getting started](https://raw.githubusercontent.com/erez-o/docsforge/master/images/tinyxml2-getting_started.png)
 
 <br>
 
 ### Man page for class XMLDocument:
 
-![XMLDocument](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-class_xml_document.png)
+![XMLDocument](https://raw.githubusercontent.com/erez-o/docsforge/master/images/tinyxml2-class_xml_document.png)
 
 <br>
 
 ### Man page for function OpenElement:
 
-![GetText1](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-open_element_1.png)
+![GetText1](https://raw.githubusercontent.com/erez-o/docsforge/master/images/tinyxml2-open_element_1.png)
 
 <br>
 
 **Page continues...**
 
-![GetText2](https://raw.githubusercontent.com/erez-o/doxiz/master/images/tinyxml2-open_element_2.png)
+![GetText2](https://raw.githubusercontent.com/erez-o/docsforge/master/images/tinyxml2-open_element_2.png)
 
 <br>
 
@@ -42,7 +42,7 @@ For example, the following screenshots are from the [TinyXml2](http://doxiz.com/
 How it works:
 ------------
 
-When you [add a new project](http://doxiz.com/add-project/choose-host/), you provide a few basic parameters:
+When you [add a new project](http://docsforge.com/add-project/choose-host/), you provide a few basic parameters:
 
 *   A url to where your repository is located.
 
@@ -97,7 +97,7 @@ autodocSettings:
 
 *   `Important API`   - The full public API can be very large and daunting for new users. Focus users to look into the most used API as was done in `Important API` section. Any auto-generated API page can be added to any section.
 
-To learn more, you can learn how to [customize the sidebar](http://help.doxiz.com/master/customizing-the-public-api), [customize the public api](http://help.doxiz.com/master/customizing-the-public-api), or view the full list of [autodoc settings](http://help.doxiz.com/master/autodoc-settings)
+To learn more, you can learn how to [customize the sidebar](http://help.docsforge.com/master/customizing-the-public-api), [customize the public api](http://help.docsforge.com/master/customizing-the-public-api), or view the full list of [autodoc settings](http://help.docsforge.com/master/autodoc-settings)
 
 
 Bugs and feature requests

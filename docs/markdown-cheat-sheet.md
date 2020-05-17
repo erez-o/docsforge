@@ -1,7 +1,7 @@
 Markdown
 ========
 
-Markdown is the language used in Doxiz pages and discussions.
+Markdown is the language used in DocsForge pages and discussions.
 It follows [John Gruber’s Markdown](http://daringfireball.net/projects/markdown/) and some extentions from [Github flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
 The package used to render markdown is [Python-Markdown](https://pypi.python.org/pypi/Markdown).
 
@@ -54,7 +54,7 @@ Emphasize using `*` or `_`. Single asterisks/underscore for Italic, double aster
 
 Headings
 ---------
-Create headings by adding 1-6 hashes (`#`) at the beginning and ending of a line. In Doxiz, you should use up till H2 because the page main title is kept seperate from the markdown content. If you do use H1, it will be rendered the same as H2.
+Create headings by adding 1-6 hashes (`#`) at the beginning and ending of a line. In DocsForge, you should use up till H2 because the page main title is kept seperate from the markdown content. If you do use H1, it will be rendered the same as H2.
 ```
 ## This is an H2 (the largest heading you should use) ##
 ### This is an H3 ###

@@ -2,13 +2,13 @@
 
 ## Broken image links and relative links
 
-Doxiz tries to resolve any relative links or image links found in your markdown files automatically. 
+DocsForge tries to resolve any relative links or image links found in your markdown files automatically. 
 However, there are always edge cases where this automatic process fails.
 In such cases you can either file an issue or change the link to an absolute url and the automatic process won't touch it.
 
 ### Broken image links
 
-Doxiz doesn't store images locally. The automatic process changes any relative image links to absolute external url.
+DocsForge doesn't store images locally. The automatic process changes any relative image links to absolute external url.
 If it fails, note the following:
 
 - Github advises users to use the following format to create absolute image links:
@@ -31,8 +31,8 @@ Shield icon links are quite popular in github repositories.
 
 If you want to add a docs shield to your repo:
 
-[![Documentation](https://img.shields.io/badge/docs-doxiz-blue)](http://doxiz.com/<YOUR_PROJECT_NAME>/)
+[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://docsforge.com/<YOUR_PROJECT_NAME>/)
 
 Add the following code snippet:
 
-`[![Documentation](https://img.shields.io/badge/docs-doxiz-blue)](http://doxiz.com/<YOUR_PROJECT_NAME>/)`
+`[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://docsforge.com/<YOUR_PROJECT_NAME>/)`

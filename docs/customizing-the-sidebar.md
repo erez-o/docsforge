@@ -23,7 +23,7 @@ sidebar:
   - Configuration Schema: docs/schema.json
   - Changelog: docs/changelog.md
   - Contact Us: docs/contact-us.md
-  - Feature Requests: https://github.com/erez-o/doxiz/issues
+  - Feature Requests: https://github.com/erez-o/docsforge/issues
 autodocSettings: {}
 ```
 
@@ -59,7 +59,7 @@ The auto-documentation creates API pages from your source code, and displays **a
  
 However, not all API pages are as important as others. Therefore, you can highlight some of them, and insert them to additional sections as well.
 
-For example: (see [getting started](https://doxiz.com/getting_started/#configuration-file))
+For example: (see [getting started](https://docsforge.com/getting_started/#configuration-file))
 
 ```yaml
 my_important_function1: api/my_important_class/my_important_function1
@@ -119,7 +119,7 @@ sidebar:
     - Discussions: docs/discussions.md
     - Markdown Cheat Sheet: docs/markdown-cheat-sheet.md
     - Configuration Schema: docs/schema.json
-    - Feature Requests: https://github.com/erez-o/doxiz/issues
+    - Feature Requests: https://github.com/erez-o/docsforge/issues
     - Contact Us: docs/contact-us.md
 autodocSettings: {}
 ```
@@ -129,11 +129,11 @@ autodocSettings: {}
 
 ### Flat level example:
 
-![Flat level example](https://raw.githubusercontent.com/erez-o/doxiz/master/images/docs-single_level_sidebar.png)
+![Flat level example](https://raw.githubusercontent.com/erez-o/docsforge/master/images/docs-single_level_sidebar.png)
 
 ### Multi level example:
 
-![Multi level example](https://raw.githubusercontent.com/erez-o/doxiz/master/images/docs-multi_level_sidebar.png)
+![Multi level example](https://raw.githubusercontent.com/erez-o/docsforge/master/images/docs-multi_level_sidebar.png)
 
 ### Adding content to a directory page
 

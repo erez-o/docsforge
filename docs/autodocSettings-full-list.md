@@ -24,7 +24,7 @@ Exclude Include Directories and Files
 !!! note
     The following keys allows control over which files and directories you wish to auto document.
     
-    For more examples, see [here](https://help.doxiz.com/master/customizing-the-public-api/#exclude-or-include-files-and-directories)
+    For more examples, see [here](https://help.docsforge.com/master/customizing-the-public-api/#exclude-or-include-files-and-directories)
     
 ### INPUT ###
 
@@ -66,7 +66,7 @@ Exclude Include API by name
 !!! note
     The following keys allows control over which pages to display or omit from the public api.
     
-    For more examples, see [here](https://help.doxiz.com/master/customizing-the-public-api/#exclude-or-include-specific-api-pages)
+    For more examples, see [here](https://help.docsforge.com/master/customizing-the-public-api/#exclude-or-include-specific-api-pages)
 
 ### excludeApi ###
 

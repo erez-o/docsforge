@@ -126,22 +126,22 @@ To name a few, there are:
 
 *   `documentProtected` - Document keyword protected as part of the Public API.
 
-You can view the full list on [autodoc settings](https://help.doxiz.com/master/autodoc-settings).
+You can view the full list on [autodoc settings](https://help.docsforge.com/master/autodoc-settings).
 
 Default AutodocSettings Per Language
 ------------------------------------
 
 We've prepared a list of default autodocSettings per lanuage:
 
-- [Default autodocSettings for C++](https://help.doxiz.com/master/autodoc-settings/#default-configurations-for-c_1)
+- [Default autodocSettings for C++](https://help.docsforge.com/master/autodoc-settings/#default-configurations-for-c_1)
 
-- [Default autodocSettings for C](https://help.doxiz.com/master/autodoc-settings/#default-configurations-for-c)
+- [Default autodocSettings for C](https://help.docsforge.com/master/autodoc-settings/#default-configurations-for-c)
 
-- [Default autodocSettings for C#](https://help.doxiz.com/master/autodoc-settings/#default-configurations-for-c_2)
+- [Default autodocSettings for C#](https://help.docsforge.com/master/autodoc-settings/#default-configurations-for-c_2)
 
-- [Default autodocSettings for Python](https://help.doxiz.com/master/autodoc-settings/#default-configurations-for-python)
+- [Default autodocSettings for Python](https://help.docsforge.com/master/autodoc-settings/#default-configurations-for-python)
 
-- [Default autodocSettings for Java](https://help.doxiz.com/master/autodoc-settings/#default-configurations-for-java)
+- [Default autodocSettings for Java](https://help.docsforge.com/master/autodoc-settings/#default-configurations-for-java)
 
 
 Multiple Language Projects

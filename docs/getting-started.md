@@ -1,14 +1,14 @@
 Getting Started
 ===============
 
-[Doxiz](https://doxiz.com/) creates and hosts documentation for your open source projects.
+[DocsForge](https://docsforge.com/) creates and hosts documentation for your open source projects.
 
 It supports both manual documentation pages, and code auto-documentation to create public API pages.
 
 Adding a New Project
 --------------------
 
-When you [add a new project](https://doxiz.com/add-project/choose-host/), you provide a few basic parameters:
+When you [add a new project](https://docsforge.com/add-project/choose-host/), you provide a few basic parameters:
 
 *   A url to where your repository is located.
 
@@ -65,7 +65,7 @@ The configuration file has 2 main parts:
 !!! Tip
     The full public API can be very large and daunting. Focus users to look into the most used API as was done in `Important API` section. Any auto-generated API page can be added to any section.
 
-To learn more, you can learn how to [customize the sidebar](https://help.doxiz.com/master/customizing-the-sidebar/), [customize the public api](https://help.doxiz.com/master/customizing-the-public-api), or view the full list of [autodoc settings](https://help.doxiz.com/master/autodoc-settings)
+To learn more, you can learn how to [customize the sidebar](https://help.docsforge.com/master/customizing-the-sidebar/), [customize the public api](https://help.docsforge.com/master/customizing-the-public-api), or view the full list of [autodoc settings](https://help.docsforge.com/master/autodoc-settings)
 
 Improving your documentation
 ----------------------------
