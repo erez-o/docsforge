@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.4.2 (20th May 2020)
+
+- Default autodocSettings are not printed in a freshly created configuration file.
+
+- Various bug fixes.
+
+## 3.4.1 (17th May 2020)
+
+- Changed domain to `www.docsforge.com`
+
+- Various bug fixes.
+
+
 ## 3.4.0 (1st May 2020)
 
 - Seperate subdomian per project. Allows to setup any custom domain like `example.com` by pointing your CNAME. 

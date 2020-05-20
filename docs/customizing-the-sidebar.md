@@ -59,7 +59,7 @@ The auto-documentation creates API pages from your source code, and displays **a
  
 However, not all API pages are as important as others. Therefore, you can highlight some of them, and insert them to additional sections as well.
 
-For example: (see [getting started](https://docsforge.com/getting_started/#configuration-file))
+For example: (see [getting started](https://help.docsforge.com/getting-started/#configuration-file))
 
 ```yaml
 my_important_function1: api/my_important_class/my_important_function1
