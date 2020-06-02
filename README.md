@@ -1,3 +1,5 @@
+[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://help.docsforge.com/)
+
 DocsForge
 =========
 
@@ -12,7 +14,7 @@ It features a customizable manual and automatic code documentation. It also feat
 Screenshots:
 ------------
 
-For example, the following screenshots are from the [TinyXml2](http://docsforge.com/tinyxml2/) project (version 7.0.1):
+For example, the following screenshots are from the [TinyXml2](http://tinyxml2.docsforge.com/) project (version 7.0.1):
 
 ### Getting started page:
 

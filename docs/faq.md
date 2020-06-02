@@ -31,8 +31,8 @@ Shield icon links are quite popular in github repositories.
 
 If you want to add a docs shield to your repo:
 
-[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://docsforge.com/<YOUR_PROJECT_NAME>/)
+[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://<YOUR_PROJECT_SUBDOMAIN>.docsforge.com/)
 
 Add the following code snippet:
 
-`[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://docsforge.com/<YOUR_PROJECT_NAME>/)`
+`[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://<YOUR_PROJECT_SUBDOMAIN>.docsforge.com/)`

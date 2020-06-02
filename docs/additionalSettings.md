@@ -8,6 +8,7 @@ To activate them, add `additionalSettings` to your configuration file, as appear
 ```yaml
 additionalSettings:
   autolink: true
+  autolink_exclude: []
   markdown_math: false
   markdown_tasklist: false
   markdown_emoji: false
@@ -37,6 +38,18 @@ Inside `<pre>` or `<code>` tags, the algorithm is greedier:
 To avoid misdetections, any reference that can point to two different API pages is excluded. For example, if two different classes have a method `get`, we won't create a link if we find `get`, `get(`, or `get<`.
 
 default: true
+
+
+autolink_exclude
+----------------
+Excludes the following list of words from being autolinked.
+
+The normal autolinking is intentionally quite greedy, but you can override and exclude a word list from this process.
+
+The words are cap sensitive, so excluding the word `my_class` won't exclude the word `my_Class`
+
+default: []
+
 
 
 markdown_math
