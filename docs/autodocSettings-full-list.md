@@ -208,7 +208,8 @@ PreProcessing
 
 If the ENABLE_PREPROCESSING tag is set to "YES", doxygen will evaluate all C-preprocessor directives found in the sources and include files.  
 
-The default value is: "NO"
+The default for C, C++ and C# is: "YES"  
+The default for other languages: "NO"
 
 Note: the values true/false can also be used instead of "YES"/"NO".
 
@@ -310,7 +311,7 @@ autodocSettings:
     # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
     EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
-    ENABLE_PREPROCESSING: 'NO'
+    ENABLE_PREPROCESSING: 'YES'
     MACRO_EXPANSION: 'NO'
     EXPAND_ONLY_PREDEF: 'NO'
     SEARCH_INCLUDES: 'YES'
@@ -346,7 +347,7 @@ autodocSettings:
     # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
     EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
-    ENABLE_PREPROCESSING: 'NO'
+    ENABLE_PREPROCESSING: 'YES'
     MACRO_EXPANSION: 'NO'
     EXPAND_ONLY_PREDEF: 'NO'
     SEARCH_INCLUDES: 'YES'
@@ -382,7 +383,7 @@ autodocSettings:
     # Don't copy them to your configuration file unless you specifically want to edit them. 
     FILE_PATTERNS: "*.cs"
     EXTENSION_MAPPING: "cs=csharp"
-    ENABLE_PREPROCESSING: 'NO'
+    ENABLE_PREPROCESSING: 'YES'
     MACRO_EXPANSION: 'NO'
     EXPAND_ONLY_PREDEF: 'NO'
     SEARCH_INCLUDES: 'YES'

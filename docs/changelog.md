@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.4.3 (9th Jun 2020)
+
+- Changed `ENABLE_PREPROCESSING` to `YES` by default for C, C++ and C#. 
+
+- Revised and default autodocSettings are printed in a freshly created configuration file.
+
+- Improved css, js, and various bug fixes.
+
+
 ## 3.4.2 (20th May 2020)
 
 - Default autodocSettings are not printed in a freshly created configuration file.
