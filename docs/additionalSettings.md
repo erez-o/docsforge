@@ -12,6 +12,7 @@ additionalSettings:
   markdown_math: false
   markdown_tasklist: false
   markdown_emoji: false
+  markdown_fenced_code_tabs: false
   wiki_repo_path: false
 ```
 
@@ -44,7 +45,7 @@ autolink_exclude
 ----------------
 Excludes the following list of words from being autolinked.
 
-The normal autolinking is intentionally quite greedy, but you can override and exclude a word list from this process.
+The normal autolinking is intentionally quite greedy, but you can override and exclude word list from this process.
 
 The words are cap sensitive, so excluding the word `my_class` won't exclude the word `my_Class`
 
@@ -78,6 +79,65 @@ As a precaution, even if enabled, emojis will only be searched on markdown files
 
 default: false
 
+
+markdown_fenced_code_tabs
+-------------
+Multiple consecutive fenced code tabs or `<pre>` tags are turned to tabs.
+
+### Simple example:
+
+    ```cpp
+    float res = calc_cpp(50);
+    ```
+    ```c
+    float res = calc_c(50);
+    ```
+
+Turns to:
+
+```cpp
+float res = calc_cpp(50);
+```
+```c
+float res = calc_c(50);
+```
+
+### Additional options:
+
+    ```cpp
+    ecs_entity_t e = ecs_new_cpp(world, 0);
+    ```
+    ```c
+    ecs_entity_t e = ecs_new_c(world, 0);
+    ```
+    ```
+    ecs_entity_t e = ecs_new_java(world, 0);
+    ```
+    <pre><code class="cpp tab_name">
+    ecs_entity_t e = ecs_new_java(world, 0);
+    </code></pre>
+    
+Turns to:
+
+```cpp
+ecs_entity_t e = ecs_new_cpp(world, 0);
+```
+```c
+ecs_entity_t e = ecs_new_c(world, 0);
+```
+```
+ecs_entity_t e = ecs_new_java(world, 0);
+```
+<pre><code class="cpp tab_name">
+ecs_entity_t e = ecs_new_java(world, 0);
+</code></pre>
+
+!!! note
+    If the language is not specified, the tab name defaults to `txt`. 
+    
+    You can control the tab name by using the raw html `<pre><code class="cpp tab_name">`
+
+default: false
 
 wiki_repo_path
 --------------
