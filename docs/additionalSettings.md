@@ -71,9 +71,19 @@ default: false
 
 markdown_emoji
 -------------
-Enable emojis in markdown. See <a href="https://www.webfx.com/tools/emoji-cheat-sheet/" rel="nofollow">cheat sheet codes</a>.
+Enable emojis in markdown. 
 
-There's a risk of emojis being recognized too often, for example, the code `std::thread::hardware_concurrency` will turn to `std:🧵:hardware_concurrency`.
+Turns:
+
+    :smile: :heart: :clap: :cake:
+    
+to:
+
+:smile: :heart: :clap: :cake:
+
+See <a href="https://www.webfx.com/tools/emoji-cheat-sheet/" rel="nofollow">cheat sheet codes</a>.
+
+There's a risk of emojis being recognized too often, for example, the code `std::thread::hardware_concurrency` will turn to `std:thread:hardware_concurrency`.
 
 As a precaution, even if enabled, emojis will only be searched on markdown files, and not automatically generated api files.
 
