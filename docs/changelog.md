@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.4.4 (15th Jun 2020)
+
+- Added support for `markdown_fenced_code_tabs`.
+
+- Added theme `clean blue`.
+
+- Added word `meta` to common english words excluded from autolinking.
+
+- Improved spam filter for discussions.
+
+- Several messages in build log are now mute.
+
+- Various bug fixes.
+
 ## 3.4.3 (9th Jun 2020)
 
 - Changed `ENABLE_PREPROCESSING` to `YES` by default for C, C++ and C#. 
