@@ -123,9 +123,7 @@ float res = calc_c(50);
     ```
     ecs_entity_t e = ecs_new_java(world, 0);
     ```
-    <pre><code class="cpp tab_name">
-    ecs_entity_t e = ecs_new_java(world, 0);
-    </code></pre>
+    <pre><code class="cpp tab_name">ecs_entity_t e = ecs_new_java(world, 0);</code></pre>
     
 Turns to:
 
