@@ -94,7 +94,7 @@ markdown_fenced_code_tabs
 -------------
 Multiple consecutive fenced code tabs or `<pre>` tags are turned to tabs.
 
-### Simple example:
+### Simple example
 
     ```cpp
     float res = calc_cpp(50);
@@ -112,7 +112,7 @@ float res = calc_cpp(50);
 float res = calc_c(50);
 ```
 
-### Additional options:
+### Advanced example
 
     ```cpp
     ecs_entity_t e = ecs_new_cpp(world, 0);
