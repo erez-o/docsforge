@@ -60,8 +60,8 @@ The EXAMPLE_PATH tag can be used to specify one or more files or directories tha
 
 The default value is: ""
 
-Exclude Include API by name
----------------------------
+Exclude Include API
+-------------------
 
 !!! note
     The following keys allows control over which pages to display or omit from the public api.
@@ -90,19 +90,44 @@ The default value is: []
 
 ### includeApi ###
 
-The includeApi tag is used to limit the auto-docmentation to a specified list of API names.
+The includeApi tag is used to limit the auto-documentation to a specified list of API names or files.
 
-If the list is not empty, only the specified apis and their descendents will be documented. Any other API will be omitted from being documented.
+This tag is useful if your source code contains hundreds of classes, but only several of them should be displayed in your public api.
+
+If the list is not empty, only the specified APIs and everything inside their scope will be documented. Any other API will be omitted from being documented.
 
 For example, by writing:
 
     includeApi:  
-    -  my_namespace/my_class  
-    -  my_namespace/my_other_class
+    -  file: my_dir/my_file.h  
 
-Only `my_namespace::my_class` and `my_namespace::my_other_class` will be documented.
+Only APIs that appear in `my_dir/my_file.h` will be documented.
 
-This tag is useful if your source code contains hundreds of classes, but only several of them should be displayed in your public api.
+For example, by writing:
+
+    includeApi:  
+    -  api: my_namespace/my_class  
+    -  api: my_namespace/my_other_class
+
+Only `my_namespace::my_class`, `my_namespace::my_other_class` and any APIs within their scope will be documented.
+
+You can also mix, for example, by writing:
+
+    includeApi:  
+    -  api: my_namespace  
+    -  file: my_dir/my_file.h  
+
+Only `my_namespace` (and any APIs within their scope) *OR* APIs that appear in file `my_dir/my_file.h` will be documented. 
+
+You can also define both conditions, for example, by writing: 
+
+    includeApi:  
+    -  api: my_namespace  
+       file: my_dir/my_file.h  
+
+Only `my_namespace` (and any APIs within their scope) *AND* that is declared in file `my_dir/my_file.h` will be documented. 
+
+Caution: Use lighly if the only condition is `api` such as a specific namespace, as it will filter any defines and scopeless entities such as free functions, typedefs, free enums etc.
 
 If this key is an empty list all apis will be documented.
 

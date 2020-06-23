@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.4.5 (23rd Jun 2020)
+
+- Added support for multiple configuration files per project. This allows different versions to be totally isolated and use alternate configuration files.
+
+- Improved `includeApi`, `excludeApi` - can now filter according to file. Filter also applies to defines/enums/typedefs
+
+- Added optional project browser tab icon.
+
+- Login goes through `www.docsforge.com` and not through `subdomain.docsforge.com`. Fixed google sign in. 
+
+- Improved css on mobile. 
+
 ## 3.4.4 (15th Jun 2020)
 
 - Added support for `markdown_fenced_code_tabs`.
