@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.4.6 (29th Jun 2020)
+
+- Improved inheritance field.
+
+- Improved syntax for `typedef` and `using`.
+
+- Improved algorithm for suggesting important api section for the first time.
+
+- Discussions can now be turned off by project maintainer.
+
+- Improved css. 
+
 ## 3.4.5 (23rd Jun 2020)
 
 - Added support for multiple configuration files per project. This allows different versions to be totally isolated and use alternate configuration files.
