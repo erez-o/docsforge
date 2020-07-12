@@ -12,7 +12,7 @@
 
 - Added `star_mentioned` and `star_list` to `autodocSettings`.
 
-- Allowed viewing `https:/subdomain.docsforge.com/` without redirection.
+- Allowed viewing `subdomain.docsforge.com` without redirection.
 
 - Improved logs, js, css, bug fixes.
 
