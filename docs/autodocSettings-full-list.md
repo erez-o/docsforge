@@ -306,6 +306,59 @@ When TYPEDEF_HIDES_STRUCT tag is enabled, a typedef of a struct, union, or enum 
 The default for C and C++ is: "YES"  
 The default for other languages: "NO"
 
+Starring API pages
+---------------------
+
+Adding a star icon on selected API pages is a helpful visual tip for users that these API are more important than others. 
+
+### star_mentioned ###
+
+When true, any API page mentioned in the tutorial pages will have a star icon on it.
+
+The default is: true
+
+### star_list ###
+
+When list is not empty, any API page on this list will have a star icon on it.
+
+For example, by writing:
+
+    star_list:  
+    -  my_namespace/my_class  
+    -  my_namespace/my_other_class
+
+These two api pages will be starred.
+
+The default is: []
+
+Display on sidebars
+---------------------
+
+### display_enums_on_sidebar ###
+
+If true, display enums on sidebar. Regardless it true or false, enums are still displayed in their parent scope.
+
+The default is: true
+
+
+### display_defines_on_sidebar ###
+
+If true, display defines on sidebar. Regardless it true or false, defines are still displayed in the public api page.
+
+The default is: true
+
+
+### display_typedefs_on_sidebar ###
+
+If true, display typedefs on sidebar. Regardless it true or false, typedefs are still displayed in their parent scope.
+
+The default is: true
+
+### display_variables_on_sidebar ###
+
+If true, display variables on sidebar. Regardless it true or false, variables are still displayed in their parent scope.
+
+The default is: true
 
 Default configurations per language
 -----------------------------------

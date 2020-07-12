@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.4.7 (12th Jul 2020)
+
+- Added `display_enums_on_sidebar`, `display_defines_on_sidebar`, `display_variables_on_sidebar`, `display_typedefs_on_sidebar`.
+
+- Enums / Defines / Typedefs / Variables are now displayed as groups.
+
+- Added section variables.
+
+- Added single character words to autolink excluded list.
+
+- Added `star_mentioned` and `star_list` to `autodocSettings`.
+
+- Allowed viewing `https:/subdomain.docsforge.com/` without redirection.
+
+- Improved logs, js, css, bug fixes.
+
+
 ## 3.4.6 (29th Jun 2020)
 
 - Improved inheritance field.
