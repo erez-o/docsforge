@@ -122,7 +122,7 @@ To insert a multiline code, either indent it by 4 spaces, or wrap the entire sni
 
 Syntax highlighting is done by highlight.js. 
 
-If you wish to actiate syntax highlighting on a block of code, you must use the (```) option, and add your selected language.
+If you wish to activate syntax highlighting on a block of code, you must use the (```) option, and add your selected language.
 
     ```python
     x = 0
@@ -138,6 +138,34 @@ x = x + 1
     print x
 ```
 
+Fenced code can also be used inside lists, just remember to indent by 4 spaces. For example:
+
+
+    Some starting paragraph:
+    
+    * First element in a list:
+      
+        ```cpp
+        auto id = 5;
+        ```
+  
+        Some paragraph
+  
+    * Second element 
+
+**Result:**
+
+Some starting paragraph:
+
+* First element in a list:
+  
+    ```cpp
+    auto id = 5;
+    ```
+
+    Some paragraph
+
+* Second element 
 
 Definition list
 ----------------

@@ -153,8 +153,7 @@ For example:
 
 ```yaml
 autodocSettings:
-  Public API C++:
-    baseUrl: api-cpp
+  C++ API:
     language: cpp
     INPUT: src/cpp
     EXCLUDE: tests/cpp examples/cpp
@@ -164,8 +163,7 @@ autodocSettings:
     documentSingleUnderscore: true
     documentStatic: true
     documentProtected: true
-  Public API Python:
-    baseUrl: api-python
+  Python API:
     language: python
     INPUT: src/python
     EXCLUDE: "tests/python examples/python setup.py test.py tests.py"
@@ -187,7 +185,6 @@ For example:
 ```yaml
 autodocSettings:
   Public API Module1:
-    baseUrl: api-module1
     language: cpp
     INPUT: src/module1
     EXCLUDE: tests/module1
@@ -199,7 +196,6 @@ autodocSettings:
     documentStatic: true
     documentProtected: true
   Public API Module2:
-    baseUrl: api-module2
     language: cpp
     INPUT: src/module2
     EXCLUDE: "tests/python examples/python setup.py test.py tests.py"

@@ -6,17 +6,55 @@ Required Fields
 
 The following fields are required in every autodoc block:
 
-### baseUrl ###
+### title ###
 
-The base Url path of every API page in this section. Especially needed if there are multiple public API sections. Each section should have a different baseUrl to avoid url collision between apis.
+The title as it will appear on the sidebar.
 
-The default value is: "api"
+The default value is: "Public API"
 
 ### language ###
 
 The programming language for the auto-documentation. 
  
 Available values are: c, cpp, csharp, java, python
+
+
+### baseUrl (optional) ###
+
+The base Url path of every API page in this section. 
+
+Each section should have a different baseUrl to avoid url collision between apis.
+
+By default, it's automatically calculated and equal to the slug of the section title, and if the section title is equal to "Public API", the baseUrl is simply "api" instead of "public-api". 
+
+You can supply a baseUrl to override this default. Sometimes you have to supply an override because slug can produce the same output for different titles because it omits certain characters, for example, slug("C API") is equal to slug("C++ API").
+
+The default value is: `slugify(section title)`  
+The default value if `title == "Public API"`: "api"
+
+### Examples ###
+
+1. This is the bare minimum for defining a cpp block:
+
+```yaml
+autodocSettings:
+  Public API:             # Required "title" for this autodoc block
+    language: c           # Required language for this autodoc block
+```
+
+2. This is the bare minimum for defining two blocks - one for c and another for c++
+
+```yaml
+autodocSettings:
+  C API:                  # Required "title" for this autodoc block
+    baseUrl: c-api        # Speficially added because slugify(C API) == slugify(C++ API)
+    language: c           # Required language for this autodoc block
+    
+  C++ API:                # Required "title" for this autodoc block
+    baseUrl: cpp-api      # Speficially added because slugify(C API) == slugify(C++ API). 
+    language: cpp         # Required language for this autodoc block
+```
+
 
 Exclude Include Directories and Files
 -------------------------------------
@@ -371,9 +409,9 @@ In C++ (`["autodocSettings][SectionName]["language"]="cpp"`), the following para
 
 ```yaml
 autodocSettings:
-  PublicAPI:
-    baseUrl: api
-    language: cpp
+  PublicAPI:                  # Required "title" for this autodoc block
+    language: cpp             # Required language for this autodoc block
+    
     INPUT: ""                 # paths to source files and directories to auto document, for example, "src include"
     EXCLUDE: ""               # paths to exclude , for example "test tests examples"
     EXCLUDE_PATTERNS: ''      # for example, */tests/* */test/*
@@ -384,6 +422,12 @@ autodocSettings:
     documentStatic: true
     documentProtected: true
     extractNonDocComments: true
+    star_mentioned: true
+    star_list: []
+    display_enums_on_sidebar: true
+    display_defines_on_sidebar: true
+    display_typedefs_on_sidebar: true
+    display_variables_on_sidebar: true
 
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -407,9 +451,9 @@ To sum up, In C `["autodocSettings][SectionName]["language"]="c"` , the followin
 
 ```yaml
 autodocSettings:
-  PublicAPI:
-    baseUrl: api
-    language: c
+  PublicAPI:                  # Required "title" for this autodoc block
+    language: c               # Required language for this autodoc block
+    
     INPUT: ""                 # paths to source files and directories to auto document, for example, "src include"
     EXCLUDE: ""               # paths to exclude , for example "test tests examples"
     EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
@@ -420,6 +464,12 @@ autodocSettings:
     documentStatic: false
     documentProtected: true
     extractNonDocComments: true
+    star_mentioned: true
+    star_list: []
+    display_enums_on_sidebar: true
+    display_defines_on_sidebar: true
+    display_typedefs_on_sidebar: true
+    display_variables_on_sidebar: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -443,9 +493,9 @@ To sum up, In C# (`["autodocSettings][SectionName]["language"]="csharp"`), the f
 
 ```yaml
 autodocSettings:
-  Public API:
-    baseUrl: api
-    language: csharp
+  PublicAPI:                  # Required "title" for this autodoc block
+    language: csharp          # Required language for this autodoc block
+    
     INPUT: ""                 # paths to source files and directories to auto document
     EXCLUDE: ""               # paths to exclude , for example "test tests examples"
     EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
@@ -456,6 +506,12 @@ autodocSettings:
     documentStatic: true
     documentProtected: true
     extractNonDocComments: true
+    star_mentioned: true
+    star_list: []
+    display_enums_on_sidebar: true
+    display_defines_on_sidebar: true
+    display_typedefs_on_sidebar: true
+    display_variables_on_sidebar: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -478,9 +534,9 @@ To sum up, In Java (`["autodocSettings][SectionName]["language"]="java"`), the f
 
 ```yaml
 autodocSettings:
-  Public API:
-    baseUrl: api
-    language: java
+  PublicAPI:                  # Required "title" for this autodoc block
+    language: java            # Required language for this autodoc block
+    
     INPUT: ""                 # paths to source files and directories to auto document
     EXCLUDE: ""               # paths to exclude , for example "test tests examples"
     EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
@@ -491,6 +547,12 @@ autodocSettings:
     documentStatic: true
     documentProtected: true
     extractNonDocComments: true
+    star_mentioned: true
+    star_list: []
+    display_enums_on_sidebar: true
+    display_defines_on_sidebar: true
+    display_typedefs_on_sidebar: true
+    display_variables_on_sidebar: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -506,9 +568,9 @@ To sum up, In Python (`["autodocSettings][Section]["language"]="python"`), the f
 
 ```yaml
 autodocSettings:
-  Public API:
-    baseUrl: api
-    language: python
+  PublicAPI:                  # Required "title" for this autodoc block
+    language: python          # Required language for this autodoc block
+
     INPUT: ""                 # paths to source files and directories to auto document
     EXCLUDE: ""               # paths to exclude , for example "test tests examples setup.py"
     EXCLUDE_PATTERNS: ""      # for example, */tests/* */test/*
@@ -518,6 +580,12 @@ autodocSettings:
     documentSingleUnderscore: false
     documentStatic: true
     documentProtected: true
+    star_mentioned: true
+    star_list: []
+    display_enums_on_sidebar: true
+    display_defines_on_sidebar: true
+    display_typedefs_on_sidebar: true
+    display_variables_on_sidebar: true
 
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 

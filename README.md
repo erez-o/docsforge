@@ -81,7 +81,6 @@ sidebar:
   
 autodocSettings:
   Public API:
-    baseUrl: api
     language: cpp
     INPUT: src
     EXCLUDE: tests examples

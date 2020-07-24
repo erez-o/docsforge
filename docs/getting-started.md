@@ -44,7 +44,6 @@ sidebar:
   - my_important_function2: api/my_important_function2
 autodocSettings:
   Public API:
-    baseUrl: api
     language: cpp
     INPUT: src
     EXCLUDE: tests examples
