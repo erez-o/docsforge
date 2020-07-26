@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.4.8 (TBD)
+## 3.4.8 (26th Jul 2020)
 
 - Updated doxygen to latest.
 
@@ -12,9 +12,7 @@
 
 - `baseUrl` is optional and not required.
 
-- Several markdown extensions will now be handled by `pymdown-extensions`. Added 
-
-- Added markdown 
+- Several markdown extensions will now be handled by `pymdown-extensions`. Added `markdown_tabs`
 
 - Improved js, css, bug fixes.
 
