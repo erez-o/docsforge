@@ -1,5 +1,23 @@
 # Changelog
 
+## 3.4.8 (TBD)
+
+- Updated doxygen to latest.
+
+- Major internal change to allow sorting by order of code appearance in the next update.
+
+- Improved discussions spam filter
+
+- Disabled sending emails to collaborators when builds are complete.
+
+- `baseUrl` is optional and not required.
+
+- Several markdown extensions will now be handled by `pymdown-extensions`. Added 
+
+- Added markdown 
+
+- Improved js, css, bug fixes.
+
 ## 3.4.7 (12th Jul 2020)
 
 - Added `display_enums_on_sidebar`, `display_defines_on_sidebar`, `display_variables_on_sidebar`, `display_typedefs_on_sidebar`.
