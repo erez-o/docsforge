@@ -53,7 +53,7 @@ Possible reasons:
     
     Solutions:
     
-    a.  If possible, change your code so that `ifdef` doesn't wrap any lines of codes.
+    1.  If possible, change your code so that `ifdef` doesn't wrap any lines of codes.
     
         ```cpp
         #ifdef MY_DEFINE
@@ -64,7 +64,7 @@ Possible reasons:
         
         ```
         
-    b.  If `MY_DEFINE` is defined in another file `my_other_file.h` add it to the `INPUT` key (so it can be read in the autodoc stage) and to `excludeAPI` (to exclude it from being documented)
+    2.  If `MY_DEFINE` is defined in another file `my_other_file.h` add it to the `INPUT` key (so it can be read in the autodoc stage) and to `excludeAPI` (to exclude it from being documented)
     
         ```yaml
         autodocSettings
@@ -76,7 +76,7 @@ Possible reasons:
             
         ```
         
-    c.  Use the `PREDEFINED` key to add the definition of to define `MY_DEFINE` for the autodoc stage.
+    3.  Use the `PREDEFINED` key to add the definition of to define `MY_DEFINE` for the autodoc stage.
     
         ```yaml
         autodocSettings
@@ -89,7 +89,7 @@ Possible reasons:
             - MY_DEFINE=10
         ```
         
-    d.  Disable `ENABLE_PREPROCESSING` to stop doxygen from evaluating any C-preprocessor directives.
+    4.  Disable `ENABLE_PREPROCESSING` to stop doxygen from evaluating any C-preprocessor directives.
     
         ```yaml
         autodocSettings
