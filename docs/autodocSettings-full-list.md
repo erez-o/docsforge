@@ -468,6 +468,8 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
+    sort_by_type: true
+    sort_alphabetically: true
 
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -506,6 +508,8 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
+    sort_by_type: true
+    sort_alphabetically: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -544,6 +548,8 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
+    sort_by_type: true
+    sort_alphabetically: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -581,6 +587,8 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
+    sort_by_type: true
+    sort_alphabetically: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -610,6 +618,8 @@ autodocSettings:
     documentProtected: true
     star_mentioned: true
     star_list: []
+    sort_by_type: true
+    sort_alphabetically: true
 
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
