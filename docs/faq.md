@@ -32,11 +32,11 @@ If you get this error message, something is wrong with your configuration file.
 
 Possible reasons:
 
-1.  No source files were read.  
+-   No source files were read.  
 
     Check that your `INPUT`, `EXCLUDE`, `includeAPI`, `excludeAPI` fields don't result in an empty file list being fed to the autodoc engine.
 
-2.  The source files are empty due to `#ifdef`. 
+-   The source files are empty due to `#ifdef`. 
 
     For example, consider a file `my_file.h` with the following content:
 
