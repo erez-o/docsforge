@@ -372,12 +372,6 @@ The default is: []
 Display on sidebars
 ---------------------
 
-### display_enums_on_sidebar ###
-
-If true, display enums on sidebar. Regardless it true or false, enums are still displayed in their parent scope.
-
-The default is: true
-
 
 ### display_defines_on_sidebar ###
 
@@ -424,10 +418,6 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
-    display_enums_on_sidebar: true
-    display_defines_on_sidebar: true
-    display_typedefs_on_sidebar: true
-    display_variables_on_sidebar: true
 
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -466,10 +456,6 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
-    display_enums_on_sidebar: true
-    display_defines_on_sidebar: true
-    display_typedefs_on_sidebar: true
-    display_variables_on_sidebar: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -508,10 +494,6 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
-    display_enums_on_sidebar: true
-    display_defines_on_sidebar: true
-    display_typedefs_on_sidebar: true
-    display_variables_on_sidebar: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -549,10 +531,6 @@ autodocSettings:
     extractNonDocComments: true
     star_mentioned: true
     star_list: []
-    display_enums_on_sidebar: true
-    display_defines_on_sidebar: true
-    display_typedefs_on_sidebar: true
-    display_variables_on_sidebar: true
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
@@ -582,10 +560,6 @@ autodocSettings:
     documentProtected: true
     star_mentioned: true
     star_list: []
-    display_enums_on_sidebar: true
-    display_defines_on_sidebar: true
-    display_typedefs_on_sidebar: true
-    display_variables_on_sidebar: true
 
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 

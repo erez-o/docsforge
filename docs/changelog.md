@@ -1,5 +1,20 @@
 # Changelog
 
+
+## 3.4.9 (5th Aug 2020)
+
+- Enums are now displayed as separate pages.
+
+- Standardized table rows of defines/typedefs/variables to be the same as function/clases/etc. Needed for allowing sorting different types by order of appearance. 
+
+- Added configurable sorting options : `sort_by_type` and `sort_alphabetically`.
+
+- Added grouping types with a user defined name, read from `@defgroup` and `@name` as a code comment.
+
+- Disabled tweakable `display_enums_on_sidebar`, `display_defines_on_sidebar`, `display_variables_on_sidebar`, `display_typedefs_on_sidebar`. They will all be displayed by default on the sidebar if sort by type.
+
+- Improved js, css.
+
 ## 3.4.8 (26th Jul 2020)
 
 - Updated doxygen to latest.
