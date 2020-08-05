@@ -369,28 +369,78 @@ These two api pages will be starred.
 
 The default is: []
 
-Display on sidebars
+
+Sort nested API children
 ---------------------
 
+APIs hierarchy is displayed according to the scope. 
 
-### display_defines_on_sidebar ###
+For example, if your namespace `my_namespace` has multiple types (classes/functions/enums/ etc...) inside its scope - they will be all be displayed below it as its children.
 
-If true, display defines on sidebar. Regardless it true or false, defines are still displayed in the public api page.
+You can configure the order of these children.
+
+The sorting order is: `sort_by_group` >  `sort_by_type` > `sort_alphabetically`.
+
+### sort_by_group ###
+
+This is not configurable through the yaml cfg, but is read from the code.
+
+For example, by adding `@defgroup` before C1,C2,func1 (and closing with `/** @} */`):
+
+```cpp
+/** @defgroup group1 The First Group
+ *  This is a detailed description (optional)
+ *  @{
+ */
+ 
+class C1 {};
+class C2 {};
+void func1() {}
+ 
+/** @} */
+```
+
+You will group C1,C2,func1 into a group called "The First Group". A group can also have an optional detailed description.
+
+You can see an example of such a grouping in [here](https://libyaml.docsforge.com/master/api/#events)
+
+### sort_by_type ###
+
+If true, sort nested API children according to types. The sorting order is:
+
+1.  Namespaces (C/C++) or Packages (python)
+
+2.  Modules (Python)
+
+3.  Classes, Structures, Unions, Interfaces
+
+4.  Constructors
+
+5.  Destructors
+
+6.  Other Functions or Properties (python)
+
+7.  Enums
+
+8.  Defines
+
+9.  Typedefs
+
+10. Variables
+
+If true, Enums, Defines, Typedefs and Variables will also be grouped. For example, all enums will be under a group named "Enums". 
+The reasoning is that they are usually of lesser importance relative to classes and functions, and it's important not to cloud the user with too much information.
 
 The default is: true
 
+### sort_alphabetically ###
 
-### display_typedefs_on_sidebar ###
+If true, sort nested children alphabetically.
 
-If true, display typedefs on sidebar. Regardless it true or false, typedefs are still displayed in their parent scope.
-
-The default is: true
-
-### display_variables_on_sidebar ###
-
-If true, display variables on sidebar. Regardless it true or false, variables are still displayed in their parent scope.
+If false, sort according to order of appearance - sorts by declaration line.
 
 The default is: true
+
 
 Default configurations per language
 -----------------------------------
