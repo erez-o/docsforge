@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.4.9.1 (10th Aug 2020)
+
+- Various fixes and css improvements. 
 
 ## 3.4.9 (5th Aug 2020)
 

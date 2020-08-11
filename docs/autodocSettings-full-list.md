@@ -404,6 +404,8 @@ You will group C1,C2,func1 into a group called "The First Group". A group can al
 
 You can see an example of such a grouping in [here](https://libyaml.docsforge.com/master/api/#events)
 
+For more in depth examples, you can read [here](https://www.doxygen.nl/manual/grouping.html)
+
 ### sort_by_type ###
 
 If true, sort nested API children according to types. The sorting order is:
