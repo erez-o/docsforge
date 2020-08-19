@@ -10,10 +10,11 @@ additionalSettings:
   autolink: true
   autolink_exclude: []
   wiki_repo_path: false
+  markdown_commonmark_gfm: false
+  markdown_tabs: false
   markdown_math: false
   markdown_tasklist: false
   markdown_emoji: false
-  markdown_tabs: false
   markdown_fenced_code_tabs: false
 ```
 
@@ -46,7 +47,11 @@ autolink_exclude
 ----------------
 Excludes the following list of words from being autolinked.
 
-The normal autolinking is intentionally quite greedy, but you can override and exclude word list from this process.
+Autolinking is intentionally greedy, so there can be some overdetection. 
+
+To solve this, you can either be more specific when you reference an api page (for example, write `my_namespace::my_class` in your markdown pages instead of `my_class`).
+
+Alternatively, you can exclude word list from this process.
 
 The words are cap sensitive, so excluding the word `my_class` won't exclude the word `my_Class`
 
@@ -81,6 +86,19 @@ default: false
 
 Markdown Extensions
 -------------------
+
+### markdown_commonmark_gfm
+
+If true, renders markdown using github flavored commonmark.
+
+If false, renders using conventional markdown.
+
+!!! note
+    Extensions listed in this page (except for markdown_fenced_code_tabs) work only if using conventional markdown.
+
+
+default: false
+
 
 ### markdown_fenced_code_tabs
 
@@ -254,3 +272,56 @@ As a precaution, even if enabled, emojis will only be activated on tutorial mark
 Emoji is activated by default on discussions.
 
 default: false
+
+### Admonition
+
+Admonitions provide important bulletings boxes for the reader. For example:
+```
+!!! note
+    You should note that the title will be automatically capitalized.
+
+!!! note "Optional Title"
+    Example with optional title.
+
+!!! hint
+    Use hints to provide helpful tips. The keywords `hint` and `tip` render the same.
+    
+    Remember - two line breaks for additional paragraphs
+
+!!! warning
+    You are about to do something dangerous.
+
+!!! danger
+    Do not try this at home!
+
+```
+**Result:**
+
+!!! note
+    You should note that the title will be automatically capitalized.
+
+!!! note "Optional Title"
+    Example with optional title.
+
+!!! hint
+    Use hints to provide helpful tips. The keywords `hint` and `tip` render the same.
+    
+    Remember - two line breaks for additional paragraphs
+
+!!! warning
+    You are about to do something dangerous.
+
+!!! danger
+    Do not try this at home!
+
+Accepted words are `note`, `warning`, `danger`, `hint`, and `tip`.
+
+Enabled automatically whenever conventional markdown is used (`markdown_commonmark_gfm: false`). 
+
+### Table of contents
+
+You can display the table of contents (created automatically from all your headings), by adding the keyword `[TOC]` in the position you want it to be spanned.
+
+The table of contents in the beginning of this page was created using it.
+
+Enabled automatically whenever conventional markdown is used (`markdown_commonmark_gfm: false`).

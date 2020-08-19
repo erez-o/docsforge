@@ -198,55 +198,6 @@ Content Cell  | Content Cell
 Content Cell  | Content Cell
 ```
 
-Admonition
-----------
-Admonitions provide important bulletings boxes for the reader. For example:
-```
-!!! note
-    You should note that the title will be automatically capitalized.
-
-!!! note "Optional Title"
-    Example with optional title.
-
-!!! hint
-    Use hints to provide helpful tips. The keywords `hint` and `tip` render the same.
-    
-    Remember - two line breaks for additional paragraphs
-
-!!! warning
-    You are about to do something dangerous.
-
-!!! danger
-    Do not try this at home!
-
-```
-**Result:**
-
-!!! note
-    You should note that the title will be automatically capitalized.
-
-!!! note "Optional Title"
-    Example with optional title.
-
-!!! hint
-    Use hints to provide helpful tips. The keywords `hint` and `tip` render the same.
-    
-    Remember - two line breaks for additional paragraphs
-
-!!! warning
-    You are about to do something dangerous.
-
-!!! danger
-    Do not try this at home!
-
-Accepted words are `note`, `warning`, `danger`, `hint`, and `tip`.
-
-Table of contents
------------------
-You can display the table of contents (created automatically from all your headings), by adding the keyword `[TOC]` in the position you want it to be spanned.
-
-The table of contents in the beginning of this page was created using it.
-
 Horizontal Rules
 ----------------
 You can produce a horizontal rule tag (`<hr/>`) by placing three or more hyphens, asterisks, or underscores on a line by themselves.

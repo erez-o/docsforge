@@ -67,8 +67,8 @@ Possible reasons:
     2.  If `MY_DEFINE` is defined in another file `my_other_file.h` add it to the `INPUT` key (so it can be read in the autodoc stage) and to `excludeAPI` (to exclude it from being documented)
     
         ```yaml
-        autodocSettings
-          PublicAPI
+        autodocSettings:
+          PublicAPI:
             ...
             INPUT: 'my_file.h my_other_file.h'
             excludeApi: [my_other_file.h]
@@ -79,8 +79,8 @@ Possible reasons:
     3.  Use the `PREDEFINED` key to add the definition of to define `MY_DEFINE` for the autodoc stage.
     
         ```yaml
-        autodocSettings
-          PublicAPI
+        autodocSettings:
+          PublicAPI:
             ...
             INPUT: 'my_file.h'
             excludeApi: []                  #default value for C/C++
@@ -92,8 +92,8 @@ Possible reasons:
     4.  Disable `ENABLE_PREPROCESSING` to stop doxygen from evaluating any C-preprocessor directives.
     
         ```yaml
-        autodocSettings
-          PublicAPI
+        autodocSettings:
+          PublicAPI:
             ...
             INPUT: 'my_file.h'
             excludeApi: []                  #default value for C/C++

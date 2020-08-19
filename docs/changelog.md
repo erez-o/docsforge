@@ -1,8 +1,17 @@
 # Changelog
 
-## 3.4.9.1 (10th Aug 2020)
+## 3.4.10 (19th Aug 2020)
+
+- Added `markdown_commonmark_gfm` - optional flag to render markdown using github commonmark renderer, thanks to https://github.com/github/cmark-gfm.
+
+- Improved spam filter.
+
+- Improved include/exclude api logic.
+
+- Internal: disabled `FILE_PATTERNS += " *.md *.txt *.rst"`
 
 - Various fixes and css improvements. 
+
 
 ## 3.4.9 (5th Aug 2020)
 
