@@ -10,7 +10,7 @@ additionalSettings:
   autolink: true
   autolink_exclude: []
   wiki_repo_path: false
-  markdown_commonmark_gfm: false
+  markdown_commonmark_gfm: true
   markdown_tabs: false
   markdown_math: false
   markdown_tasklist: false
@@ -89,7 +89,7 @@ Markdown Extensions
 
 ### markdown_commonmark_gfm
 
-If true, renders markdown using github flavored commonmark.
+If true, renders markdown using github flavored commonmark. By default also supports github's commonmark extensions - table, strikethrough, autolink, tagfilter, tasklist. 
 
 If false, renders using conventional markdown.
 
@@ -97,7 +97,7 @@ If false, renders using conventional markdown.
     Extensions listed in this page (except for markdown_fenced_code_tabs) work only if using conventional markdown.
 
 
-default: false
+default: true
 
 
 ### markdown_fenced_code_tabs
@@ -155,6 +155,8 @@ ecs_entity_t e = ecs_new_java(world, 0);
     
     You can control the tab name by using the raw html `<pre><code class="cpp tab_name">`
 
+This extension can be enabled with either commonmark or conventional markdown (both `markdown_commonmark_gfm: false` and `markdown_commonmark_gfm: true`).
+
 default: false
 
 ### markdown_tabs
@@ -190,6 +192,8 @@ A more general syntax for allowing tabs can be created using this extension.
 
 As a precaution, even if enabled, tabs will only be activated on tutorial markdown files, and not automatically generated api files.
 
+Requires conventional markdown (`markdown_commonmark_gfm: false`). Not supported in commonmark (`markdown_commonmark_gfm: true`).
+
 default: false
 
 ### markdown_math
@@ -209,6 +213,8 @@ For example:
 
 
 Javascript rendering is later done using <a href="https://www.mathjax.org/" rel="nofollow">MathJax</a>. 
+
+Requires conventional markdown (`markdown_commonmark_gfm: false`). Not supported in commonmark (`markdown_commonmark_gfm: true`).
 
 default: false
 
@@ -248,6 +254,8 @@ Enable github markdown style task list
     - [ ] item 2
     - [ ] item 3
 
+Requires conventional markdown (`markdown_commonmark_gfm: false`). Supported by default in commonmark (`markdown_commonmark_gfm: true`).
+
 default: false
 
 
@@ -269,7 +277,7 @@ There's a risk of emojis being recognized too often, for example, the code `my_n
 
 As a precaution, even if enabled, emojis will only be activated on tutorial markdown files, and not automatically generated api files.
 
-Emoji is activated by default on discussions.
+Requires conventional markdown (`markdown_commonmark_gfm: false`). Not supported in commonmark (`markdown_commonmark_gfm: true`).
 
 default: false
 
@@ -316,7 +324,8 @@ Admonitions provide important bulletings boxes for the reader. For example:
 
 Accepted words are `note`, `warning`, `danger`, `hint`, and `tip`.
 
-Enabled automatically whenever conventional markdown is used (`markdown_commonmark_gfm: false`). 
+Enabled automatically whenever conventional markdown is used (`markdown_commonmark_gfm: false`). Not supported in commonmark (`markdown_commonmark_gfm: true`).
+
 
 ### Table of contents
 
@@ -324,4 +333,5 @@ You can display the table of contents (created automatically from all your headi
 
 The table of contents in the beginning of this page was created using it.
 
-Enabled automatically whenever conventional markdown is used (`markdown_commonmark_gfm: false`).
+Enabled automatically whenever conventional markdown is used (`markdown_commonmark_gfm: false`). Not supported in commonmark (`markdown_commonmark_gfm: true`).
+

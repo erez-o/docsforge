@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.4.11 (10th Sep 2020)
+
+- Added online markdown editor for discussions.
+ 
+- `markdown_commonmark_gfm: true` is now the default.
+
+- Added Javascript "show more"/"Show less" for table cells that are too high.
+
+- Added configurable `separate_defines` to allow defines to be displayed on a separate page.
+
+- Added configurable `extract_namespace_comments` to optionally disregard code comments relating to namespaces (modules and packages for python).
+
+- General css improvements.
+
 ## 3.4.10 (19th Aug 2020)
 
 - Added `markdown_commonmark_gfm` - optional flag to render markdown using github commonmark renderer, thanks to https://github.com/github/cmark-gfm.

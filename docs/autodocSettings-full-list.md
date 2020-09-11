@@ -206,7 +206,20 @@ If False, objects with permission level "protected" will not be documented not a
 The default value is: true
 
 
-Extract All Code Comments
+Display defines on separate pages
+---------------------------------
+
+### separate_defines ###
+
+Disaply defines on separate pages.
+
+If False, defines don't have a seperate page, and the defines full info (synopsis and full description) appears on the defines table summary.
+
+If True, each define appears on a separate dedicated api page (as done for functions and classes), and only the define's brief description and synopsis appears on the defines summary table.
+
+The default value is: false
+
+Extract Code Comments
 ------------------------
 
 ### extractNonDocComments ###
@@ -214,6 +227,7 @@ Extract All Code Comments
 Extracts all non doc code comments.
 
 If False, only doc comments that start with `///` or `/**` will be extracted.
+
 If True, non doc comments that start with `//` or `/*` will also be extracted.
 
 The default value for C, C++, C#, Java is: false  
@@ -241,6 +255,42 @@ For Python this value is not relevant and has no effect.
     
     On the other hand, extracting all comments (`extractNonDocComments=true`) can extract comments that are aimed to be for internal use only.  
     If you prefer `extractNonDocComments=true`, and wish to stop a certain comment from being extracted, turning `//` to `////` will stop it from being extracted.
+
+### extract_namespace_comments ###
+
+Extracts code comments of namespaces (packages and modules in python).
+
+If False, code comments related to namespace will be disregarded.
+
+Useful if namespace code comments don't describe the namespace but something else.
+
+For example, consider the following common mistake:
+
+```cpp
+/**
+ *
+ *  myfile.h
+ *  myemail@gmail.com
+ *
+ *  Copyright 2018, myname.  All rights reserved.
+ *  Use of this source code is governed by a MIT license
+ *  that can be found in the License file.
+ *
+ */
+ 
+namespace my_namespace{
+    ... Some code
+
+}
+```
+
+The programmer intended for `my_namespace` to have no code comment, but since the file comment is the preceding comment for `my_namespace`, it's taken as its comment.
+
+The way to fix it is to add a `/file` doxygen tag (instead of `myfile.h` write `/file myfile.h`). Alternatively, turn the file comment to a non extracted code comment (`//` or `/*`) instead of an extracted code comment (`///` or `/**`).
+
+A dirty fix is to use `extract_namespace_comments` to disregard any comments related to namespace.
+
+The default value is: true
 
 Source File Types
 -----------------
