@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.4.12 (21th Sep 2020)
+
+- Improved "show more"/"Show less".
+
+- Added internal tests. Improved internal logs. General css improvements.
+
 ## 3.4.11 (10th Sep 2020)
 
 - Added online markdown editor for discussions.

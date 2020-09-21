@@ -98,11 +98,18 @@ The EXAMPLE_PATH tag can be used to specify one or more files or directories tha
 
 The default value is: ""
 
-Exclude Include API
+Exclude or Include only Specific API Pages
 -------------------
 
 !!! note
-    The following keys allows control over which pages to display or omit from the public api.
+    The following keys allow control over which pages to display or omit from the public api.
+    
+    For example, in C/C++ it's common to document only public APIs that appear in `include/public_file.h`, gather their implementations from the `src` directory, but not to document any additional internal APIs that appear in the `src` directory. 
+    
+    ```cpp
+    INPUT: 'include/public_file.h src'
+    includeApi: include/public_file.h
+    ```
     
     For more examples, see [here](https://help.docsforge.com/master/customizing-the-public-api/#exclude-or-include-specific-api-pages)
 
@@ -132,7 +139,7 @@ The includeApi tag is used to limit the auto-documentation to a specified list o
 
 This tag is useful if your source code contains hundreds of classes, but only several of them should be displayed in your public api.
 
-If the list is not empty, only the specified APIs and everything inside their scope will be documented. Any other API will be omitted from being documented.
+If the list is not empty, **only the specified APIs will be documented**. Any other API will be omitted from being documented.
 
 For example, by writing:
 
@@ -155,7 +162,7 @@ You can also mix, for example, by writing:
     -  api: my_namespace  
     -  file: my_dir/my_file.h  
 
-Only `my_namespace` (and any APIs within their scope) *OR* APIs that appear in file `my_dir/my_file.h` will be documented. 
+Only `my_namespace` (and any APIs within their scope) **OR** APIs that appear in file `my_dir/my_file.h` will be documented. 
 
 You can also define both conditions, for example, by writing: 
 
@@ -163,7 +170,7 @@ You can also define both conditions, for example, by writing:
     -  api: my_namespace  
        file: my_dir/my_file.h  
 
-Only `my_namespace` (and any APIs within their scope) *AND* that is declared in file `my_dir/my_file.h` will be documented. 
+Only `my_namespace` (and any APIs within their scope) **AND** that is declared in file `my_dir/my_file.h` will be documented. 
 
 Caution: Use lighly if the only condition is `api` such as a specific namespace, as it will filter any defines and scopeless entities such as free functions, typedefs, free enums etc.
 
