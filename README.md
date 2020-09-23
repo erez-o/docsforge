@@ -21,7 +21,7 @@ Support docs in markdown, GitHub flavored commonmark, reStructuredText, AsciiDoc
 Supports API documentation in multiple languages (uses and extends doxygen). Supports projects with multiple languages (for example both C++ and python). Documentation pages are scanned to automatically detect api pages and creates links to them.
 
 - **Highly configurable yaml configuration file**.  
-Define which markdown files you want to display, define 
+Define which documentation files you wish to display, and over 20 configuration options to display only the important APIs your users should see.
 
 - **Docs are updated automatically.**.  
 Your docs are rebuilt periodically so your project remains in sync with the docs.
@@ -43,21 +43,9 @@ For example, the following screenshots are from the [TinyXml2](http://tinyxml2.d
 
 <br>
 
-### Man page for class XMLDocument:
-
-![XMLDocument](https://raw.githubusercontent.com/erez-o/docsforge/master/images/tinyxml2-class_xml_document.png)
-
-<br>
-
 ### Man page for function OpenElement:
 
 ![GetText1](https://raw.githubusercontent.com/erez-o/docsforge/master/images/tinyxml2-open_element_1.png)
-
-<br>
-
-**Page continues...**
-
-![GetText2](https://raw.githubusercontent.com/erez-o/docsforge/master/images/tinyxml2-open_element_2.png)
 
 <br>
 
@@ -73,17 +61,17 @@ An example configuration file:
 
 ```yaml
 sidebar:
-  Basic Tutorial:
-  - Getting Started: readme.md
-  - Installation: docs/readme.md
+  Basic Tutorial:                                   # Add Section `Basic Tutorial` to the sidebar
+  - Getting Started: readme.md                      
+  - Installation: docs/installation.md              # Add a markdown page to your sidebar located in your repo at `docs/installation.md`
   Advanced Tutorial:
   - Frequently Asked Questions: docs/faq.md
   - Advanced Topics: docs/advanced.md
-  - Code Example 1: src/my_example.cpp
-  - Contact us: http://example.com/contact-us/
-  Important API:
-  - func1: api/my_class/func1             # Highlight your most used api. 
-  - class2: api/class2                    # Highlight your most used api. 
+  - Code Example 1: src/my_example.cpp              # Add an example cpp page to your sidebar.
+  - Contact us: http://example.com/contact-us/      # Add a link to your sidebar. 
+  Important API:                                    # Add Section `Important API` to the sidebar
+  - func1: api/my_class/func1                       # Highlight your most used api. 
+  - class2: api/class2                              # Highlight your most used api. 
   
 autodocSettings:
   Public API:
@@ -94,7 +82,7 @@ autodocSettings:
     excludeApi:
     - my_class/my_func                    # exclude `my_class/my_func` from being auto documented
     includeApi:
-    - include/publc.h                     # autodocument only elements that are declared in `include/public.h`.
+    - include/publc.h                     # autodocument only elements that are declared in `include/public.h`. 
     documentSingleUnderscore: true        # document functions/classes if their names start with `_`
     documentStatic: true                  # document `static` elements 
     documentProtected: true               # document `protected` elements
