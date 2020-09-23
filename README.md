@@ -193,6 +193,9 @@ Example projects using docsforge
 - https://flecs.docsforge.com/
 
     ![flecs-doc](https://raw.githubusercontent.com/erez-o/docsforge/master/images/flecs-doc-example.png)
+    
+    <br>
+    
     ![flecs-api](https://raw.githubusercontent.com/erez-o/docsforge/master/images/flecs-api-example.png)
     
     The configuration file is: (note two separate autodoc blocks for `C API` and `C++ API`)
