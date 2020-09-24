@@ -247,9 +247,9 @@ Example projects using docsforge
 
     ![EnTT-api](https://raw.githubusercontent.com/erez-o/docsforge/master/images/entt-api.png)
 
-Bugs and feature requests
--------------------------
+Help and documentation
+----------------------
 
-If you find a bug or have a feature request, please open an issue here.
+For a more detailed documentation, go to https://help.docsforge.com/
 
-This project is actively being developed, so any feedback is greatly appreciated.  
+If you need help with optimizing your project configuration file, or found a bug or have a feature request, please open an issue here.
