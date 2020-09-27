@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.4.13 (27th Sep 2020)
+
+- Improve validation tests for yaml configuration files.
+
+- Improved "mentioned in"
+
+- Improved `sort_by_declaration`.
+
 ## 3.4.12 (21th Sep 2020)
 
 - Improved "show more"/"Show less".

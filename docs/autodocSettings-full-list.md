@@ -440,7 +440,9 @@ The sorting order is: `sort_by_group` >  `sort_by_type` > `sort_alphabetically`.
 
 ### sort_by_group ###
 
-This is not configurable through the yaml cfg, but is read from the code.
+`sort_by_group` is not a configurable option, but it's worth explaining it here next to `sort_by_type` and `sort_alphabetically` which are configurable.
+ 
+You can add user defined groups directly in the code. 
 
 For example, by adding `@defgroup` before C1,C2,func1 (and closing with `/** @} */`):
 
@@ -459,9 +461,15 @@ void func1() {}
 
 You will group C1,C2,func1 into a group called "The First Group". A group can also have an optional detailed description.
 
-You can see an example of such a grouping in [here](https://libyaml.docsforge.com/master/api/#events)
+If groups are found, they are always sorted first (`sort_by_group` >  `sort_by_type` > `sort_alphabetically`).
 
-For more in depth examples, you can read [here](https://www.doxygen.nl/manual/grouping.html)
+The resulting output in a live project can be seen in the following picture:
+
+![grouping](https://raw.githubusercontent.com/erez-o/docsforge/master/images/group_output_example.png)
+
+(*) Notice the output after the user defined the groups 'Events', 'Nodes', etc... 
+
+For more in depth examples, you can read the manual about the grouping mechanism in [doxygen](https://www.doxygen.nl/manual/grouping.html)
 
 ### sort_by_type ###
 
@@ -496,7 +504,7 @@ The default is: true
 
 If true, sort nested children alphabetically.
 
-If false, sort according to order of appearance - sorts by declaration line.
+If false, sort according to order of appearance - sorts by declaration filename, then by line number.
 
 The default is: true
 
