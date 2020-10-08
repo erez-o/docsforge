@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.4.14 (8th Oct 2020)
+
+- `docsforge.yaml` configuration file can now be also read from the repository if the user chooses it. Until now configuration files had to be managed locally on `docsforge.com` 
+
+- Added `.tpp` as a valid c++ file extension. Default values of `FILE_PATTERNS` and `EXTENSION_MAPPING` now include `.tpp`.
+
+- Added additional words to the list of common words excluded from autolinking (most popular additions: `min`, `max`, `bool`,...)
+
+- Nameless groups are now disregarded.
+
+- Added `DISTRIBUTE_GROUP_DOC` to the `autodocSettings` section in the YAML configuration file.
+
 ## 3.4.13 (27th Sep 2020)
 
 - Improve validation tests for yaml configuration files.

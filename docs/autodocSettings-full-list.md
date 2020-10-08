@@ -304,15 +304,40 @@ Source File Types
 
 ### FILE_PATTERNS ###
 
-determines which source file extensions are read.
- 
-The default is different for every language. See [default configurations per language](#default-configurations-per-language).
-    
+`FILE_PATTERNS` determines which source file extensions are read.
+
 ### EXTENSION_MAPPING ###
 
-determines the language the file extension is read as.
+`EXTENSION_MAPPING` determines the language the file extension is read as.
 
-The default is different for every language. See [default configurations per language](#default-configurations-per-language).
+The defaults for both fields are different for every language: 
+
+=== "C/C++"
+    ```
+    FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm *.tpp"
+    EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c tpp=c"
+    ```
+
+
+=== "C#"
+    ```
+    FILE_PATTERNS: "*.cs"
+    EXTENSION_MAPPING: "cs=csharp"
+    ```
+
+
+=== "Python"
+    ```
+    FILE_PATTERNS: "*.py *.pyw"
+    EXTENSION_MAPPING: "py=python pyw=python"
+    ```
+
+
+=== "Java"
+    ```
+    FILE_PATTERNS: "*.java"
+    EXTENSION_MAPPING: "java=java"
+    ```
 
 
 PreProcessing
@@ -393,6 +418,14 @@ The default value is: ""
 
 Configuration Options
 ---------------------
+
+### DISTRIBUTE_GROUP_DOC ###
+
+If member grouping is used in the documentation and the `DISTRIBUTE_GROUP_DOC` tag is set to "YES", doxygen will reuse the documentation of the first member in the group (if any) for the other members of the group. 
+
+By default all members of a group must be documented explicitly.
+
+The default value is: "NO"
 
 ### TYPEDEF_HIDES_STRUCT ###
 
@@ -504,7 +537,7 @@ The default is: true
 
 If true, sort nested children alphabetically.
 
-If false, sort according to order of appearance - sorts by declaration filename, then by line number.
+If false, sort according to order of appearance - first by declaration filename full path, then by line number.
 
 The default is: true
 
@@ -580,8 +613,8 @@ autodocSettings:
   
     # The following parameters are usually good for 99% of projects. 
     # Don't copy them to your configuration file unless you specifically want to edit them. 
-    FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm"
-    EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c"
+    FILE_PATTERNS: "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.mm *.tpp"
+    EXTENSION_MAPPING: "c=c C=c cc=c CC=c cxx=c cpp=c c++=c ii=c ixx=c ipp=c i++=c inl=c h=c H=c hh=c HH=c hxx=c hpp=c h++=c mm=c tpp=c"
     ENABLE_PREPROCESSING: 'YES'
     MACRO_EXPANSION: 'NO'
     EXPAND_ONLY_PREDEF: 'NO'

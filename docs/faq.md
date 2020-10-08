@@ -113,3 +113,23 @@ If you want to add a docs shield to your repo:
 Add the following code snippet:
 
 `[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://<YOUR_PROJECT_SUBDOMAIN>.docsforge.com/)`
+
+
+## Configuration file from repo ##
+
+For each version, the configuration file can either be read from your repository, or read from our database.
+
+Choose whichever is more convenient for you.
+
+When you choose to take the configuration file from your repository, you supply a `raw url` where the file can be reached.
+
+For example, if your project is in github, and your `docsforge.yaml` file is located at the root of the repository, it is accessible at https://raw.githubusercontent.com/user/repository/branch/docsforge.yaml
+
+Taking the file from the raw url is by far the fastest approach, especially if you're building the docs of your older `version 3.5.1` and you want to use the latest configuration file from your `master` branch.
+
+The drawback is that it can take some time for github and other providers to update the raw urls.
+
+!!! note
+    When you push a commit to github, it can take some time for github to clear the cache and update the raw urls.
+    
+    To be on the safe side, you can access the url and check that it has been updated before rebuilding your docs.

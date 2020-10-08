@@ -18,7 +18,7 @@ Takes only a few minutes to get your documentation website up and running.
 Support docs in markdown, GitHub flavored commonmark, reStructuredText, AsciiDoc, Man, MediaWiki, ...
 
 - **API code documentation, tailored for C/C++**.  
-Supports API documentation in multiple languages (uses and extends doxygen). Supports projects with multiple languages (for example both C++ and python). Documentation pages are scanned to automatically detect api pages and creates links to them.
+Supports API documentation in multiple languages (uses doxygen's xml output). Supports projects with multiple languages (for example both C++ and python). Documentation pages are scanned to automatically detect api pages and creates links to them.
 
 - **Highly configurable yaml configuration file**.  
 Define which documentation files you wish to display, and over 20 configuration options to display only the important APIs your users should see.
