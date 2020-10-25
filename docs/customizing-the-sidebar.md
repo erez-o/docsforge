@@ -84,7 +84,7 @@ Contact us: http://example.com/contact-us/
 
 To add a documentation page to your sidebar, you need to supply a `key` that defines the page name, and a `value` that defines that file path to where the **raw** file is.
 
-For example, from a regular repository:
+For example, a markdown file from a regular repository:
     
 ```yaml
 My page: https://raw.githubusercontent.com/<username>/<reponame>/master/<filename>.md

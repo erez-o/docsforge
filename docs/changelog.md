@@ -1,8 +1,28 @@
 # Changelog
 
+## 3.4.15 (25th Oct 2020)
+
+- Added `scrollspy` javascript implementation to documentation & api pages.
+
+- Improved build behaviour if `separate_defines: true`.
+
+- Various javascript improvements in handling of sidebar tree. Improved back/forward behaviour. 
+
+- Added github stargazers & forks. 
+
+- `font-awsome` updated to 4.7.0. 
+
+- Added css fix for reStructuredText adding `.system-message` errors in created html.
+
+- Added link to cfg used from repo if exists. 
+
+- Removed "download version/package" button from top header. Not helpful - people will prefer cloning or downloading directly from github.
+
+- Enums / Typedefs / Variables inside classes are now also `split_by_file=True`. Same as the public api page.
+
 ## 3.4.14 (8th Oct 2020)
 
-- `docsforge.yaml` configuration file can now be also read from the repository if the user chooses it. Until now configuration files had to be managed locally on `docsforge.com` 
+- Added an option to read `docsforge.yaml` configuration from the repository if the user chooses it. Until now configuration files had to be managed locally on `docsforge.com` 
 
 - Added `.tpp` as a valid c++ file extension. Default values of `FILE_PATTERNS` and `EXTENSION_MAPPING` now include `.tpp`.
 

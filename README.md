@@ -3,13 +3,13 @@
 DocsForge
 =========
 
-[DocsForge](http://docsforge.com/) is a documentation framework that creates and hosts docs for github code projects.
+[DocsForge](http://docsforge.com/) is a free documentation framework that creates and hosts a docs website for github code projects.
 
 Key features
 ------------
 
 - **No installation needed**.  
-Your docs are built and hosted directly through [DocsForge](http://docsforge.com/).
+Your docs website is built and hosted directly through [DocsForge](http://docsforge.com/).
 
 - **Easy to set up**.  
 Takes only a few minutes to get your documentation website up and running. 
@@ -24,7 +24,7 @@ Supports API documentation in multiple languages (uses doxygen's xml output). Su
 Define which documentation files you wish to display, and over 20 configuration options to display only the important APIs your users should see.
 
 - **Docs are updated automatically.**.  
-Your docs are rebuilt periodically so your project remains in sync with the docs.
+Your docs are rebuilt periodically and remain in sync with your repository.
 
 - **Multiple versions**.  
 Host docs for multiple interesting branches or versions. For example, `master` and `v1.0`. 
@@ -250,6 +250,11 @@ Example projects using docsforge
 Help and documentation
 ----------------------
 
-For a more detailed documentation, go to https://help.docsforge.com/
+For a more detailed documentation, go to https://help.docsforge.com/ . The help section uses the same algorithm as any other project on docsforge.
 
-If you need help with optimizing your project configuration file, or found a bug or have a feature request, please open an issue here.
+If you need help with optimizing your project configuration file, found a bug or have a feature request, please open an issue here or feel free to email me.
+
+Support
+-------
+
+If you like this project or use it, a star is always welcome :)

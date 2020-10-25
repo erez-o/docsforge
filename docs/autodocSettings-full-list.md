@@ -500,6 +500,8 @@ The resulting output in a live project can be seen in the following picture:
 
 ![grouping](https://raw.githubusercontent.com/erez-o/docsforge/master/images/group_output_example.png)
 
+<br>
+
 (*) Notice the output after the user defined the groups 'Events', 'Nodes', etc... 
 
 For more in depth examples, you can read the manual about the grouping mechanism in [doxygen](https://www.doxygen.nl/manual/grouping.html)
