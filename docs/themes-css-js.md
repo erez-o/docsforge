@@ -49,7 +49,7 @@ This additional html snippet will be included at the end of the `<head>` section
 
 Example snippet:
 
-```
+```html
 <!-- External css -->
 <link rel="stylesheet" href="URL_TO_YOUR_CSS_FILE.min.css">
 
@@ -59,7 +59,7 @@ Example snippet:
 
 [Jsdelivr](https://github.com/jsdelivr/jsdelivr) provides a free and easy way to serve css/js files from your github repository using the format:
 
-```
+```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/user/repo@version/filename.min.css">.
 ```
 
@@ -99,7 +99,7 @@ This additional html snippet will be included at the end of the `<body>` section
 
 Example snippet:
 
-```
+```html
 <!-- External javascript -->
 <script src="URL_TO_YOUR_JS_FILE.min.js"></script>
 
@@ -109,7 +109,7 @@ Example snippet:
 
 [Jsdelivr](https://github.com/jsdelivr/jsdelivr) provides a free and easy way to serve css/js files from your github repository using the format:
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/gh/user/repo@version/filename.min.js"></script>
 ```
 
