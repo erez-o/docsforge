@@ -121,7 +121,7 @@ Adding an access key for the search box [#27](https://github.com/erez-o/docsforg
 
 Add the following html snippet:
 
-```js
+```html
 <script>
   $("#search-in-project").attr("accesskey", "s");      // Activate the search box when pressing "s" on the keyboard
 </script>
