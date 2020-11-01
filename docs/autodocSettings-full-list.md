@@ -434,6 +434,21 @@ When TYPEDEF_HIDES_STRUCT tag is enabled, a typedef of a struct, union, or enum 
 The default for C and C++ is: "YES"  
 The default for other languages: "NO"
 
+### FORCE_LOCAL_INCLUDES ###
+
+When FORCE_LOCAL_INCLUDES tag is enabled, include files will appear with `""` instead of `<>` (for example, `#include "filename.h"` instead of `#include <filename.h>`). 
+
+The default value is: "NO"
+
+### MARKDOWN_SUPPORT ###
+
+If MARKDOWN_SUPPORT tag is enabled, doxygen pre-processes all code comments according to the Markdown format.
+
+Disable only in case of backward compatibilities issues.
+
+The default value is: "YES"
+
+
 Starring API pages
 ---------------------
 

@@ -4,7 +4,7 @@ sidebar:
   - Customizing The Sidebar: docs/customizing-the-sidebar.md
   - Customizing The Public Api: docs/customizing-the-public-api.md
   - Discussions: docs/discussions.md
-  - Themes and CSS: docs/themes-and-css.md
+  - Themes, CSS, JS: docs/themes-css-js.md
   More Info:
   - Autodoc Settings: docs/autodocSettings-full-list.md
   - Additional Settings: docs/additionalSettings.md

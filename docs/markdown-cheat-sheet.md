@@ -170,6 +170,7 @@ Some starting paragraph:
 Definition list
 ----------------
 Definition lists are defined using the syntax established in [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/#def-list).
+
 ```
 Apple
 :   Pomaceous fruit of plants of the genus Malus in
@@ -187,6 +188,11 @@ Apple
 
 Orange
 :   The fruit of an evergreen tree of the genus Citrus.
+
+
+Requires conventional markdown (`markdown_commonmark_gfm: false`). This syntax is not supported if using Github flavor commonmark (`markdown_commonmark_gfm: true`).
+
+Warning: Definition lists are not supported in doxygen, so any code comment with this syntax won't be rendered correctly. 
 
 Tables
 ------

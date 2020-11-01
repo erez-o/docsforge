@@ -3,10 +3,13 @@
 DocsForge
 =========
 
-[DocsForge](http://docsforge.com/) is a free documentation framework that creates and hosts a docs website for github code projects.
+[DocsForge](http://docsforge.com/) is a free documentation framework that creates and hosts docs (and API docs) for github code projects.
 
 Key features
 ------------
+
+- **API code documentation, tailored for C/C++**.  
+Creates automatic API documentation in multiple languages (uses doxygen's xml output). Supports projects with multiple languages (for example both C++ and python).
 
 - **No installation needed**.  
 Your docs website is built and hosted directly through [DocsForge](http://docsforge.com/).
@@ -15,16 +18,16 @@ Your docs website is built and hosted directly through [DocsForge](http://docsfo
 Takes only a few minutes to get your documentation website up and running. 
 
 - **Multiple docs formats**.  
-Support docs in markdown, GitHub flavored commonmark, reStructuredText, AsciiDoc, Man, MediaWiki, ...
+Supports tutorial docs in markdown, GitHub flavored commonmark, reStructuredText, AsciiDoc, Man, MediaWiki, ...
 
-- **API code documentation, tailored for C/C++**.  
-Supports API documentation in multiple languages (uses doxygen's xml output). Supports projects with multiple languages (for example both C++ and python). Documentation pages are scanned to automatically detect api pages and creates links to them.
+- **Automatic linking to APIs**
+No need to write markdown links to your APIs. Your docs are scanned and any keyword pattern matching your APIs is automatically linked. 
 
 - **Highly configurable yaml configuration file**.  
 Define which documentation files you wish to display, and over 20 configuration options to display only the important APIs your users should see.
 
 - **Docs are updated automatically.**.  
-Your docs are rebuilt periodically and remain in sync with your repository.
+You can always rebuild whenever you want. If you forget, your docs will automatically be rebuilt every week and remain in sync with your repository. 
 
 - **Multiple versions**.  
 Host docs for multiple interesting branches or versions. For example, `master` and `v1.0`. 

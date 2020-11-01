@@ -112,7 +112,9 @@ If you want to add a docs shield to your repo:
 
 Add the following code snippet:
 
-`[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://<YOUR_PROJECT_SUBDOMAIN>.docsforge.com/)`
+```
+[![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://<YOUR_PROJECT_SUBDOMAIN>.docsforge.com/)
+```
 
 
 ## Configuration file from repo ##
@@ -133,3 +135,4 @@ The drawback is that it can take some time for github and other providers to upd
     When you push a commit to github, it can take some time for github to clear the cache and update the raw urls.
     
     To be on the safe side, you can access the url and check that it has been updated before rebuilding your docs.
+   

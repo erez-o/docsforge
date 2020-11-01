@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.4.16 (1st Nov 2020)
+
+- `css` and `javascript` html snippets can now be added by project maintainers.
+
+- Added css variables to allow easier theming by project maintainers. Dropped support for IE11. See [#26](https://github.com/erez-o/docsforge/issues/26)
+
+- Added `FORCE_LOCAL_INCLUDES` to the `autodocSettings` section in the YAML configuration file. See [#21](https://github.com/erez-o/docsforge/issues/21)
+
+- Added doxygen's `MARKDOWN_SUPPORT` to the `autodocSettings` section in the YAML configuration file. See [#22](https://github.com/erez-o/docsforge/issues/22)
+
+- Improved handling of unicode special charachters, e.g. `em dash`. See [#30](https://github.com/erez-o/docsforge/issues/30)
+
+- Bugfix - code comment with special doxygen command `\par` with a title wasn't parsed correctly. See [#24](https://github.com/erez-o/docsforge/issues/24), [#25](https://github.com/erez-o/docsforge/issues/25)
+
+- Improved collapsing sidebar speed on mobile.
+
 ## 3.4.15 (25th Oct 2020)
 
 - Added `scrollspy` javascript implementation to documentation & api pages.
