@@ -115,7 +115,7 @@ Example snippet:
 
 ### Helpful JS Examples ###
 
-#### accesskey #### 
+#### accesskey ####
 
 Adding an access key for the search box [#27](https://github.com/erez-o/docsforge/issues/27)
 
