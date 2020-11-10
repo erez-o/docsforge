@@ -237,6 +237,8 @@ If False, only doc comments that start with `///` or `/**` will be extracted.
 
 If True, non doc comments that start with `//` or `/*` will also be extracted.
 
+Since there's usually a copyright comment on the beginning of the file, the algorithm disregards the first encountered non-doc multiline comment (`/*`, not `/**`) or the first encountered multi lines of normal comments (`//`, not `///`).
+
 The default value for C, C++, C#, Java is: false  
 For Python this value is not relevant and has no effect.
 

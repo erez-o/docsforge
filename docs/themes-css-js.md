@@ -87,6 +87,27 @@ Notable css variables:
 
 If you wish to add additional variable please open an issue on github. 
 
+### Adding Raw CSS ###
+
+You can also add raw css. 
+
+Notable examples:
+
+1.  Disabling link colors inside code blocks:
+
+    ```css
+    /* Disable link colors and underline */
+    code.hljs a{
+        color: inherit;             /* keep syntax highlight original color */
+        text-decoration: none;
+    }
+    
+    /* Decorate with underline on hover */
+    code.hljs a:hover{
+        text-decoration: underline;
+    }
+    ```
+
 
 
 

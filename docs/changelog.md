@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.4.17 (10th Nov 2020)
+
+- Added code source browsing. See [#36](https://github.com/erez-o/docsforge/issues/36)
+
+- Improved `extractNonDocComments` - when true, it disregards the first non-doc multiline comment (`/*`, not `/**`) or multi lines of normal comments (`//`, not `///`).
+
+- Fixed `/pre` and `/post` titles were rendered incorrectly. Need to display `Precondition` and `Postcondition` instead. see [#31](https://github.com/erez-o/docsforge/issues/31)
+
+- Removed colons that were inconsistently added on several special key titles (`Exceptions`, `Parameters`, `Template Parameters`) . See end of [#34](https://github.com/erez-o/docsforge/issues/34#issuecomment-722439919)
+
+- Improved css and javascript. [highlightjs-line-numbers.js](https://github.com/wcoder/highlightjs-line-numbers.js/) was added for source browsing.
+
 ## 3.4.16 (1st Nov 2020)
 
 - `css` and `javascript` html snippets can now be added by project maintainers.
