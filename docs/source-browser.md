@@ -19,19 +19,19 @@ source_browser:
   filename_extensions_exclude: '.txt .md'         # exclude these filename extension
 ```
 
-### source_browser ###
+## source_browser ##
 
 If `source_browser:` does not exist in your configuration file, source browsing will be deactivated.
 
 To activate, `source_browser:` with at least one key (`input`, `title`, etc.) must exist in your configuration file.
 
-### title ###
+## title ##
 
 The section title of the source browser.
 
 The default value is: "Source Browser"
 
-### base_url ###
+## base_url ##
 
 The base url path of every page in this section. 
 
@@ -40,7 +40,7 @@ Each section should have a different base url to avoid url collision between oth
 The default value is: "source"
 
 
-### input ###
+## input ##
 
 The input tag is used to specify the files and/or directories that you wish to add to the source browsing. 
 
@@ -55,7 +55,7 @@ If this tag is empty, all the source files in your repository are scanned.
 The default value is: ""
 
 
-### exclude ###
+## exclude ##
 
 The exclude tag can be used to specify files and/or directories that should be excluded from the input source files.
 
@@ -66,7 +66,7 @@ If this tag is empty, no files/folders will be excluded.
 The default value is: ""
 
 
-### filename_extensions ###
+## filename_extensions ##
 
 The filename_extensions tag can be used to include only extensions in this list. 
 
@@ -77,7 +77,7 @@ If this tag is empty, all filename extensions will be included.
 The default value is: ""
 
 
-### filename_extensions_exclude ###
+## filename_extensions_exclude ##
 
 The filename_extensions_exclude tag can be used to exclude extensions in this list. 
 
