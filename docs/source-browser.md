@@ -5,7 +5,7 @@ Source browsing can be enabled by adding the key `source_browser`.
 
 Any files and folders in the `input` field will be recursively included.
 
-Source browsing allows users to browse the source code with links to the various api docs created by docsforge.
+Source browsing allows users to browse the source code files with helpful links to the various API documentation pages.
 
 For example:
 
@@ -74,8 +74,39 @@ For example, `filename_extensions: '.cpp .h'` will exclude any files that don't 
 
 If this tag is empty, all filename extensions will be included.
 
-The default value is: ""
+The default is different for every code language of the autodoc settings: 
 
+
+=== "C/C++"
+    ```
+    FILE_PATTERNS: ".c .cc .cxx .cpp .c++ .ii .ixx .ipp .i++ .inl .h .hh .hxx .hpp .h++ .mm .tpp"
+    ```
+
+
+=== "C#"
+    ```
+    FILE_PATTERNS: ".cs"
+    ```
+
+
+=== "Python"
+    ```
+    FILE_PATTERNS: ".py .pyw"
+    ```
+
+
+=== "Java"
+    ```
+    FILE_PATTERNS: ".java"
+    ```
+
+If a project has several autodoc blocks with **different languages**, the default `filename_extensions` will be a union of them.
+
+For example, the default `filename_extensions` of a project that has both C and Python autodoc blocks, will be:
+
+```
+FILE_PATTERNS: ".c .cc .cxx .cpp .c++ .ii .ixx .ipp .i++ .inl .h .hh .hxx .hpp .h++ .mm .tpp .py .pyw"
+```
 
 ## filename_extensions_exclude ##
 

@@ -109,6 +109,17 @@ Notable examples:
     ```
 
 
+2.  Invisible scrollbar:
+
+    ```css
+    /* Invisible scrollbar. Main usage in dark sidebar theme and sidebar content isn't too long so functionality isn't hindered by making scrollbar invisible. */
+    @media (min-width:1025px) {
+        .sidebar-wrapper{
+            margin-right:-20px !important;
+        }
+    }
+    ```
+
 
 
 Javascript

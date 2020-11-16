@@ -68,6 +68,8 @@ Exclude Include Directories and Files
 
 The INPUT tag is used to specify the files and/or directories that you wish to auto-document. 
 
+Directories will be read recursively.
+
 You may enter file names like `myfile.cpp` or directories like `src/myproject`. Separate the files or directories with spaces.
 
 Note that relative paths are relative to the root of your repository.
@@ -79,6 +81,8 @@ The default value is: ""
 ### EXCLUDE ###
 
 The EXCLUDE tag can be used to specify files and/or directories that should be excluded from the INPUT source files. This way you can easily exclude a subdirectory from a directory tree whose root is specified with the INPUT tag. 
+
+Directories will be excluded recursively.
 
 Note that relative paths are relative to the root of your repository.
 

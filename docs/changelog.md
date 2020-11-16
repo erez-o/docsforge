@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.4.18 (16th Nov 2020)
+
+- Fixed source browsing bug - source file names with uppercase were causing broken links. Disabled slugification of source browsing files.
+
+- Improved autolinking - Added dash (`-`).
+
+- Improved css.
+
+- Improved add new project form.
+
+- Added terser for javascript minification. Improved deployment of minified css and javascript.
+ 
 ## 3.4.17 (10th Nov 2020)
 
 - Added code source browsing. See [#36](https://github.com/erez-o/docsforge/issues/36)
