@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.4.19 (18th Nov 2020)
+
+- Improved discussions.
+
+- "Mentioned in" is now disabled for namespaces / packages / modules.
+
+- Improved support for anonymous enums. 
+
 ## 3.4.18 (16th Nov 2020)
 
 - Fixed source browsing bug - source file names with uppercase were causing broken links. Disabled slugification of source browsing files.
