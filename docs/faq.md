@@ -136,3 +136,15 @@ The drawback is that it can take some time for github and other providers to upd
     
     To be on the safe side, you can access the url and check that it has been updated before rebuilding your docs.
    
+
+## Doxygen Preprocessor ##
+
+TODO: Elaborate on this topic. 
+
+Read [doxygen's explanation](https://www.doxygen.nl/manual/preprocessing.html) on how to use the preprocessor.
+
+Read [comment on stackoverflow](https://stackoverflow.com/questions/3435225/c-meta-programming-doxygen-documentation) on real life example. 
+
+### C++ Macros not read correctly ###
+
+### Documenting SFINAE ###

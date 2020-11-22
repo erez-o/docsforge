@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.4.20 (22nd Nov 2020)
+
+- Fixed download configuration bug [#42](https://github.com/erez-o/docsforge/issues/42) 
+
+- Improved correction of code body starting position.
+
+- Fixed bug where public api was not correctly disaplyed [#41](https://github.com/erez-o/docsforge/issues/41). Issue was related to API objects having the same name in the same scope.
+
+- Added `Overload` badge to overload functions. If multiple different (non empty) brief exists, display each on a separate row. See  [#37](https://github.com/erez-o/docsforge/issues/37)
+
+- Improved `extractNonDocComments` - removed line separators if exist.
+
+- Improved css. 
+
 ## 3.4.19 (18th Nov 2020)
 
 - Improved discussions.
