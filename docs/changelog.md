@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.4.21 (TBD)
+
+- Fixed private function overlaods [#37](https://github.com/erez-o/docsforge/issues/37).
+
+- Overload badge changed to lowercase.
+
+- Created infrastructure for LLVM, Incomplete. See [#40](https://github.com/erez-o/docsforge/issues/40) and doxygen issue [#8202](https://github.com/doxygen/doxygen/issues/8202)
+
+
 ## 3.4.20 (22nd Nov 2020)
 
 - Fixed download configuration bug [#42](https://github.com/erez-o/docsforge/issues/42) 
