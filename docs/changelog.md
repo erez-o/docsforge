@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.4.22 (14th Dec 2020)
+
+- Fixed css.
+
 ## 3.4.21 (6th Dec 2020)
 
 - Fixed private function overlaods [#37](https://github.com/erez-o/docsforge/issues/37).
