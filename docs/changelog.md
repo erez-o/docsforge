@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.4.23 (27th Dec 2020)
+
+- Improved handling of raw html documentation file - automatic anchorification of headings.
+
+- Improved recaptcha of discussions - guest users are given extra chances.
+
+- Improved css - API links inside file code block stand out more.
+
+- Bugfix - urls like `operator[]` weren't rendered correctly. Changed `iriencode` -> `urlencode`.
+
 ## 3.4.22 (14th Dec 2020)
 
 - Fixed css.
