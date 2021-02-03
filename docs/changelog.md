@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.4.24 (2nd Feb 2021)
+
+- Added support for Algolia [#44](https://github.com/erez-o/docsforge/issues/44).
+
+- Bugfix url [#45](https://github.com/erez-o/docsforge/issues/45).
+
+- Various bug fixes and improvements. 
+
 ## 3.4.23 (27th Dec 2020)
 
 - Improved handling of raw html documentation file - automatic anchorification of headings.
