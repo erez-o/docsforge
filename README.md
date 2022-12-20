@@ -1,3 +1,13 @@
+Project discontinued, thanks to all who contributed :heart:
+===================================================
+
+
+
+
+
+
+
+
 [![Documentation](https://img.shields.io/badge/docs-docsforge-blue)](http://help.docsforge.com/)
 
 DocsForge
